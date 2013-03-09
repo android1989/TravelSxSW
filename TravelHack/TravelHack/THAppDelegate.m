@@ -8,6 +8,7 @@
 
 #import "THAppDelegate.h"
 #import "DCIntrospect.h"
+#import "THAAClient.h"
 
 @implementation THAppDelegate
 
@@ -17,6 +18,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+	
+	[[THAAClient client] loginWithUsername:@"592T7E0" password:@"testing"];
 
 #if TARGET_IPHONE_SIMULATOR
 	[[DCIntrospect sharedIntrospector] start];

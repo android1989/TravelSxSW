@@ -21,6 +21,8 @@
 		589875A516EB9D63008A24A1 /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898759F16EB9D63008A24A1 /* DCIntrospect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		589875A616EB9D63008A24A1 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 589875A216EB9D63008A24A1 /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		589875A916EB9F1F008A24A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589875A816EB9F1F008A24A1 /* QuartzCore.framework */; };
+		A0C6492B16EBD13E00081AD5 /* THAAClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6492A16EBD13E00081AD5 /* THAAClient.m */; };
+		A0C6494F16EBD69700081AD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C6494E16EBD69700081AD5 /* SystemConfiguration.framework */; };
 		AFE3367716EB958300034BA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367616EB958300034BA4 /* UIKit.framework */; };
 		AFE3367916EB958300034BA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367816EB958300034BA4 /* Foundation.framework */; };
 		AFE3367B16EB958300034BA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367A16EB958300034BA4 /* CoreGraphics.framework */; };
@@ -63,6 +65,9 @@
 		589875A216EB9D63008A24A1 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		589875A816EB9F1F008A24A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		58DE623B16EBC10400C7A2B3 /* THConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = THConstants.h; path = Common/THConstants.h; sourceTree = "<group>"; };
+		A0C6492916EBD13E00081AD5 /* THAAClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THAAClient.h; path = Data/THAAClient.h; sourceTree = "<group>"; };
+		A0C6492A16EBD13E00081AD5 /* THAAClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THAAClient.m; path = Data/THAAClient.m; sourceTree = "<group>"; };
+		A0C6494E16EBD69700081AD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AFE3367316EB958300034BA4 /* TravelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE3367616EB958300034BA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFE3367816EB958300034BA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C6494F16EBD69700081AD5 /* SystemConfiguration.framework in Frameworks */,
 				589875A916EB9F1F008A24A1 /* QuartzCore.framework in Frameworks */,
 				AFE3367716EB958300034BA4 /* UIKit.framework in Frameworks */,
 				AFE3367916EB958300034BA4 /* Foundation.framework in Frameworks */,
@@ -146,9 +152,26 @@
 			name = Submodules;
 			sourceTree = "<group>";
 		};
+		A0C6492816EBD12400081AD5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A0C6492916EBD13E00081AD5 /* THAAClient.h */,
+				A0C6492A16EBD13E00081AD5 /* THAAClient.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		A0C6492C16EBD5A700081AD5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		AFE3366A16EB958300034BA4 = {
 			isa = PBXGroup;
 			children = (
+				A0C6494E16EBD69700081AD5 /* SystemConfiguration.framework */,
 				589875A716EB9EAD008A24A1 /* Submodules */,
 				AFE3367C16EB958300034BA4 /* TravelHack */,
 				AFE3367516EB958300034BA4 /* Frameworks */,
@@ -178,6 +201,8 @@
 		AFE3367C16EB958300034BA4 /* TravelHack */ = {
 			isa = PBXGroup;
 			children = (
+				A0C6492C16EBD5A700081AD5 /* Shared */,
+				A0C6492816EBD12400081AD5 /* Networking */,
 				AFE3368516EB958300034BA4 /* THAppDelegate.h */,
 				AFE3368616EB958300034BA4 /* THAppDelegate.m */,
 				AFE3367D16EB958300034BA4 /* Supporting Files */,
@@ -281,6 +306,7 @@
 				589875A416EB9D63008A24A1 /* DCFrameView.m in Sources */,
 				589875A516EB9D63008A24A1 /* DCIntrospect.m in Sources */,
 				589875A616EB9D63008A24A1 /* DCStatusBarOverlay.m in Sources */,
+				A0C6492B16EBD13E00081AD5 /* THAAClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +388,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TravelHack/TravelHack-Prefix.pch";
 				INFOPLIST_FILE = "TravelHack/TravelHack-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TravelHack/Shared/BRNetworking\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,6 +403,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TravelHack/TravelHack-Prefix.pch";
 				INFOPLIST_FILE = "TravelHack/TravelHack-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TravelHack/Shared/BRNetworking\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
