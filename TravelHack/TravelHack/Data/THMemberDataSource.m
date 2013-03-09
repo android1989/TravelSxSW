@@ -7,6 +7,7 @@
 //
 
 #import "THMemberDataSource.h"
+#import "THReservation.h"
 
 NSString * const THMemberDataSourceDidBecomeReadyNotification = @"THMemberDataSourceDidBecomeReadyNotification";
 NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
@@ -16,6 +17,7 @@ NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 @property (nonatomic, copy) NSString *userName;
 @property (nonatomic, copy) NSString *password;
 @property (nonatomic, strong) THAAClient *client;
+@property (nonatomic, strong) THReservation *reservation;
 @end
 
 @implementation THMemberDataSource
@@ -30,7 +32,7 @@ NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 		_client = [THAAClient client];
 		
 		[self _fetchAccountInfo];
-		
+		[self _fetchFlightInfo];
 	}
 	return self;
 }
@@ -41,14 +43,42 @@ NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 		if (!error)
 		{
 			_account = responseData;
+			[self _fetchCurrentFlightInfoIfPossible];
 			[self postUpdateNotificationsIfNeeded];
 		}
 	}];
 }
 
+- (void)_fetchFlightInfo
+{
+	[self.client fetchReservationListWithUsername:self.userName password:self.password completion:^(id responseData, NSError *error) {
+		if (!error)
+		{
+			self.reservation = responseData;
+			[self _fetchCurrentFlightInfoIfPossible];
+		}
+	}];
+}
+		
+- (void)_fetchCurrentFlightInfoIfPossible
+{
+	if (!self.reservation || !self.account)
+		return;
+	
+	THFlight *flight = self.reservation.nextFlight;
+	[self _fetchCurrentFlightInfoWithFlight:flight];
+}
+
+- (void)_fetchCurrentFlightInfoWithFlight:(THFlight *)flight
+{
+	[self.client fetchFlightStatusWithFlight:flight account:self.account completion:^(id responseData, NSError *error) {
+		NSLog(@"%@", responseData);
+	}];
+}
+
 - (BOOL)isReady
 {
-	return _account != nil;
+	return self.account != nil && self.nextFlight != nil;
 }
 
 - (void)postUpdateNotificationsIfNeeded

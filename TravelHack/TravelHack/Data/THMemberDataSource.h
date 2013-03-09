@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "THAccount.h"
 #import "THAAClient.h"
+#import "THFlight.h"
 
 extern NSString * const THMemberDataSourceDidBecomeReadyNotification;
 extern NSString * const THMemberDataSourceDidUpdate;
 
 @interface THMemberDataSource : NSObject
 @property (nonatomic, readonly) THAccount *account;
+@property (nonatomic, readonly) THFlight *nextFlight;
 
 - (BOOL)isReady;
 
