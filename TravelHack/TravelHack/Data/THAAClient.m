@@ -61,7 +61,16 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
 - (void)fetchAccountInformationWithUsername:(NSString *)username password:(NSString *)password completion:(THAAClientCompletionBlock)completion
 {
 	// Fill in
-    [self executeRequestWithPath:@"account" httpMethod:@"GET" parameters:@{@"aadvantageNumber" : username, @"password":password} completion:^(id responseData, NSError *error) {
+    [self executeRequestWithPath:@"account" httpMethod:@"GET" parameters:@{@"aadvantageNumber" : username, @"password": password} completion:^(id responseData, NSError *error) {
+        if (completion) {
+            completion(responseData, error);
+        }
+    }];
+}
+
+- (void)fetchReservationListWithUsername:(NSString *)username password:(NSString *)password completion:(THAAClientCompletionBlock)completion
+{
+    [self executeRequestWithPath:@"reservationlist" httpMethod:@"GET" parameters:@{@"aadvantageNumber" : username, @"password":password, @"noWindowCheck" : @"true"} completion:^(id responseData, NSError *error) {
         if (completion) {
             completion(responseData, error);
         }

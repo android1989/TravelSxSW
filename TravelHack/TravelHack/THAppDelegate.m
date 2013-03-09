@@ -26,6 +26,10 @@
     [[THAAClient client] fetchAccountInformationWithUsername:AAADVANTAGE_NUMBER password:PASSWORD completion:^(id responseData, NSError *error) {
         NSLog(@"Account Info: %@", error);
     }];
+    
+    [[THAAClient client] fetchReservationListWithUsername:AAADVANTAGE_NUMBER password:PASSWORD completion:^(id responseData, NSError *error) {
+        NSLog(@"Account Infro: %@", error);
+    }];
 
 #if TARGET_IPHONE_SIMULATOR
 	[[DCIntrospect sharedIntrospector] start];
