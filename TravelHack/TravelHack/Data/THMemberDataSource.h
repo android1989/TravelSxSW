@@ -15,7 +15,6 @@ extern NSString * const THMemberDataSourceDidUpdate;
 
 @interface THMemberDataSource : NSObject
 @property (nonatomic, readonly) THAccount *account;
-@property (nonatomic, strong) THAAClient *client;
 
 - (BOOL)isReady;
 

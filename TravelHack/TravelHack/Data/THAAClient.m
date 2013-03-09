@@ -8,6 +8,7 @@
 
 #import "THAAClient.h"
 #import "AFHTTPClient.h"
+#import "THAccount.h"
 
 static NSString * const AABaseURL = @"https://aahackathon.api.layer7.com:9443/AA1/";
 static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
@@ -62,8 +63,17 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
 {
 	// Fill in
     [self executeRequestWithPath:@"account" httpMethod:@"GET" parameters:@{@"aadvantageNumber" : username, @"password":password} completion:^(id responseData, NSError *error) {
+		
+		THAccount *account = nil;
+		
+		if (!error)
+		{
+			account = [[THAccount alloc] init];
+			[account configureWithDictionary:[NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error]];
+		}
+		
         if (completion) {
-            completion(responseData, error);
+            completion(account, error);
         }
     }];
 }

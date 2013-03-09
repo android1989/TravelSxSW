@@ -8,13 +8,14 @@
 
 #import "THMemberDataSource.h"
 
-extern NSString * const THMemberDataSourceDidBecomeReadyNotification = @"THMemberDataSourceDidBecomeReadyNotification";
-extern NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
+NSString * const THMemberDataSourceDidBecomeReadyNotification = @"THMemberDataSourceDidBecomeReadyNotification";
+NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 
 
 @interface THMemberDataSource()
 @property (nonatomic, copy) NSString *userName;
 @property (nonatomic, copy) NSString *password;
+@property (nonatomic, strong) THAAClient *client;
 @end
 
 @implementation THMemberDataSource
@@ -26,6 +27,7 @@ extern NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpd
 	{
 		_userName = [username copy];
 		_password = [password copy];
+		_client = [THAAClient client];
 		
 		[self _fetchAccountInfo];
 		
@@ -36,8 +38,25 @@ extern NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpd
 - (void)_fetchAccountInfo
 {
 	[self.client fetchAccountInformationWithUsername:self.userName password:self.password completion:^(id responseData, NSError *error) {
-		_account = responseData;
+		if (!error)
+		{
+			_account = responseData;
+			[self postUpdateNotificationsIfNeeded];
+		}
 	}];
+}
+
+- (BOOL)isReady
+{
+	return _account != nil;
+}
+
+- (void)postUpdateNotificationsIfNeeded
+{
+	if (![self isReady])
+		return;
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:THMemberDataSourceDidUpdate object:self];
 }
 
 - (void)_fetchReservationList
