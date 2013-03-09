@@ -10,6 +10,9 @@
 #import "DCIntrospect.h"
 #import "THAAClient.h"
 
+#define AAADVANTAGE_NUMBER @"592T7E0"
+#define PASSWORD @"testing"
+
 @implementation THAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -19,7 +22,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 	
-	[[THAAClient client] loginWithUsername:@"592T7E0" password:@"testing"];
+	[[THAAClient client] loginWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
+    [[THAAClient client] fetchAccountInformationWithUsername:AAADVANTAGE_NUMBER password:PASSWORD completion:^(id responseData, NSError *error) {
+        NSLog(@"Account Info: %@", error);
+    }];
 
 #if TARGET_IPHONE_SIMULATOR
 	[[DCIntrospect sharedIntrospector] start];
