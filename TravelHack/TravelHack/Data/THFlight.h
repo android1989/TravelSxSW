@@ -10,9 +10,9 @@
 #import "THFlightStatus.h"
 
 @interface THFlight : NSObject
-@property (nonatomic, strong) NSString *depatureDate;
-@property (nonatomic, strong) NSString *arrivalDate;
-@property (nonatomic, strong) NSString *boardingTime;
+@property (nonatomic, strong) NSDate *depatureDate;
+@property (nonatomic, strong) NSDate *arrivalDate;
+@property (nonatomic, strong) NSDate *boardingTime;
 @property (nonatomic, strong) NSString *originAirportCode;
 @property (nonatomic, strong) NSString *destinationAirportCode;
 @property (nonatomic, strong) NSString *flightNumber;

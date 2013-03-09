@@ -21,17 +21,14 @@ static THZuluDateFormatter *_formatter;
 
 - (void)configureWithDictionary:(NSDictionary *)dictionary
 {
-	self.depatureDate = [dictionary objectForKey:@"departDate"];
-	self.arrivalDate = [dictionary objectForKey:@"arrivalDate"];
-	self.boardingTime = [dictionary objectForKey:@"boardingTime"];
+	self.depatureDate = [_formatter dateFromString:[dictionary objectForKey:@"departDate"]];
+	self.arrivalDate =  [_formatter dateFromString:[dictionary objectForKey:@"arrivalDate"]];
+	self.boardingTime = [_formatter dateFromString:[dictionary objectForKey:@"boardingTime"]];
 	self.originAirportCode = [dictionary objectForKey:@"originAirportCode"];
 	self.destinationAirportCode = [dictionary objectForKey:@"destinationAirportCode"];
-	self.flightNumber = [dictionary objectForKey:@"flightKey"];
+	self.flightNumber = [dictionary objectForKey:@"flightNumber"];
 	self.destinationCity = [dictionary objectForKey:@"destinationCity"];
-	
-	NSError *error = nil;
-	NSDate *date = [_formatter dateFromString:[dictionary objectForKey:@"departDate"]];
-	
+		
 	self.flightStatus = [[THFlightStatus alloc] init];
 	[self.flightStatus configureWithDictionary:[dictionary objectForKey:@"flightStatus"]];
 }

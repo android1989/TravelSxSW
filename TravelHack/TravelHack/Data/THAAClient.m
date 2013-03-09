@@ -103,22 +103,17 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
 
 - (void)fetchFlightStatusWithFlight:(THFlight *)flight account:(THAccount *)account completion:(THAAClientCompletionBlock)completion
 {
-    NSString *departureMonth = @"";
-    NSString *departureDay = @"";
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSDateComponents *components = [calendar components:NSDayCalendarUnit | NSMonthCalendarUnit fromDate:flight.depatureDate];
+	
+    NSString *departureMonth = [NSString stringWithFormat:@"%d", components.month];
+    NSString *departureDay = [NSString stringWithFormat:@"%d", components.day];
     NSString *flightNumber = flight.flightNumber;
-    NSString *originCode = flight.originAirportCode;
-    NSString *departureTime = flight.depatureDate;
-    NSString *lastName = account.lastName;
-    NSString *firstName = account.firstName;
-    NSString *seatNo = @"";
-    NSString *travelId = @"";
-    NSString *segmentId = @"";
-    NSString *recordLocator = @"";
-    
-    NSDictionary *parameters = @{@"departureMonth": departureMonth, @"departureDay":departureDay , @"flightNumber": flightNumber, @"departureTime": departureTime, @"lastName" : lastName, @"firstName":firstName , @"seatNo" : seatNo, @"travelId" : travelId, @"segmentId" : segmentId, @"recordlocator": recordLocator};
-    
-    [self executeRequestWithPath:@"flightStatus" httpMethod:@"GET" parameters:parameters completion:^(id responseData, NSError *error) {
+    NSDictionary *parameters = @{@"departureMonth": departureMonth, @"departureDay":departureDay , @"flightNumber": flightNumber };
+	
+    [self executeRequestWithPath:@"flightstatus" httpMethod:@"GET" parameters:parameters completion:^(id responseData, NSError *error) {
 
+#warning Parse!
 				
 		if (completion)
 			completion(responseData, error);
