@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BRNetworkManager.h"
 
-@interface THAAClient : BRNetworkManager
+@interface THAAClient : NSObject
 
 + (THAAClient *)client;
 

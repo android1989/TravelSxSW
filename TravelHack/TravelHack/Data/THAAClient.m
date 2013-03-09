@@ -7,9 +7,6 @@
 //
 
 #import "THAAClient.h"
-#import "BRNetworkManager.h"
-#import "BRNetworkCallback.h"
-#import "BRRequestParameter.h"
 #import "AFHTTPClient.h"
 
 static NSString * const AABaseURL = @"https://aahackathon.api.layer7.com:9443/AA1/";
