@@ -105,11 +105,11 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
 {
     NSString *departureMonth = @"";
     NSString *departureDay = @"";
-    NSString *flightNumber = @"";
-    NSString *originCode = @"";
-    NSString *departureTime = @"";
-    NSString *lastName = @"";
-    NSString *firstName = @"";
+    NSString *flightNumber = flight.flightNumber;
+    NSString *originCode = flight.originAirportCode;
+    NSString *departureTime = flight.depatureDate;
+    NSString *lastName = account.lastName;
+    NSString *firstName = account.firstName;
     NSString *seatNo = @"";
     NSString *travelId = @"";
     NSString *segmentId = @"";
