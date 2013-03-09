@@ -78,6 +78,15 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
     }];
 }
 
+- (void)fetchReservationListWithUsername:(NSString *)username password:(NSString *)password completion:(THAAClientCompletionBlock)completion
+{
+    [self executeRequestWithPath:@"reservationlist" httpMethod:@"GET" parameters:@{@"aadvantageNumber" : username, @"password":password, @"noWindowCheck" : @"true"} completion:^(id responseData, NSError *error) {
+        if (completion) {
+            completion(responseData, error);
+        }
+    }];
+}
+
 - (void)executeRequestWithPath:(NSString *)path httpMethod:(NSString *)method parameters:(NSDictionary *)parameters completion:(THAAClientCompletionBlock)completion
 {
 	NSMutableDictionary *allParameters = [NSMutableDictionary dictionaryWithObject:AAAPIKey forKey:@"apikey"];
