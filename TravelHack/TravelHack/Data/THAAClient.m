@@ -9,6 +9,8 @@
 #import "THAAClient.h"
 #import "AFHTTPClient.h"
 #import "THAccount.h"
+#import "THFlight.h"
+#import "THReservation.h"
 
 static NSString * const AABaseURL = @"https://aahackathon.api.layer7.com:9443/AA1/";
 static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
@@ -81,8 +83,20 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
 - (void)fetchReservationListWithUsername:(NSString *)username password:(NSString *)password completion:(THAAClientCompletionBlock)completion
 {
     [self executeRequestWithPath:@"reservationlist" httpMethod:@"GET" parameters:@{@"aadvantageNumber" : username, @"password":password, @"noWindowCheck" : @"true"} completion:^(id responseData, NSError *error) {
+		
+		THReservation *reservation = nil;
+		if (!error)
+		{
+			NSDictionary *root = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
+			root = [root valueForKey:@"reservation"];
+			reservation = [[THReservation alloc] init];
+			[reservation configureWithDictionary:root];
+			reservation.isNextReservation = YES;
+		}
+		
+		
         if (completion) {
-            completion(responseData, error);
+            completion(reservation, error);
         }
     }];
 }
