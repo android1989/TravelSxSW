@@ -127,7 +127,7 @@
 			attributes = {
 				CLASSPREFIX = TH;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Andrew Hulsizer";
+				ORGANIZATIONNAME = "Team AT&T Travel Hackathon";
 			};
 			buildConfigurationList = AFE3366E16EB958300034BA4 /* Build configuration list for PBXProject "TravelHack" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -283,6 +283,7 @@
 				AFE3369216EB958300034BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
