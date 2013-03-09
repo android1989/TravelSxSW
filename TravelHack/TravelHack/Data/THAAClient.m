@@ -115,15 +115,13 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
     NSString *segmentId = @"";
     NSString *recordLocator = @"";
     
-    NSMutableDictionary *parameters = @{@"departureMonth": departureMonth, @"departureDay":departureDay , @"flightNumber": flightNumber, @"departureTime": departureTime, @"lastName" : lastName, @"firstName":firstName , @"seatNo" : seatNo, @"travelId" : travelId, @"segmentId" : segmentId, @"recordlocator": recordLocator};
-    
+    NSDictionary *parameters = @{@"departureMonth": departureMonth, @"departureDay":departureDay , @"flightNumber": flightNumber, @"departureTime": departureTime, @"lastName" : lastName, @"firstName":firstName , @"seatNo" : seatNo, @"travelId" : travelId, @"segmentId" : segmentId, @"recordlocator": recordLocator};
     
     [self executeRequestWithPath:@"flightStatus" httpMethod:@"GET" parameters:parameters completion:^(id responseData, NSError *error) {
-        if (completion) {
-            if (completion) {
-                completion(responseData, error);
-            }
-        }
+
+				
+		if (completion)
+			completion(responseData, error);
     }];
 }
 

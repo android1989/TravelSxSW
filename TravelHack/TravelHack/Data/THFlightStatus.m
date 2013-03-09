@@ -12,6 +12,9 @@
 
 - (void)configureWithDictionary:(NSDictionary *)dictionary
 {
+	if ([[NSNull null] isEqual:dictionary])
+		return;
+	
 	self.status = [dictionary objectForKey:@"flightStatus"];
 	self.originInfo = [[THFlightStatusInformation alloc] init];
 	[self.originInfo configureWithDictionary:[dictionary objectForKey:@"originInfo"]];
