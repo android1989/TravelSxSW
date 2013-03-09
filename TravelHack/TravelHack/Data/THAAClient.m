@@ -58,6 +58,11 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
 	}];
 }
 
+- (void)fetchAccountInformationWithUsername:(NSString *)username password:(NSString *)password completion:(THAAClientCompletionBlock)completion
+{
+	// Fill in
+}
+
 - (void)executeRequestWithPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(THAAClientCompletionBlock)completion
 {
 	NSMutableDictionary *allParameters = [NSMutableDictionary dictionaryWithObject:AAAPIKey forKey:@"apikey"];

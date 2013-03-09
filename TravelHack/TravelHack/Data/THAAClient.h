@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+typedef id<NSObject> (^THAAClientParseBlock)(NSData *data, NSError **error);
 typedef void(^THAAClientCompletionBlock)(id responseData, NSError *error);
 
 @interface THAAClient : NSObject
@@ -15,5 +16,7 @@ typedef void(^THAAClientCompletionBlock)(id responseData, NSError *error);
 + (THAAClient *)client;
 
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password;
+
+- (void)fetchAccountInformationWithUsername:(NSString *)username password:(NSString *)password completion:(THAAClientCompletionBlock)completion;
 
 @end
