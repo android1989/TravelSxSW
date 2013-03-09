@@ -53,7 +53,7 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
 	if (!username.length || !password.length)
 		return;
 	
-	[self executeRequestWithPath:@"login" parameters:@{@"aadvantageNumber": username, @"password": password} completion:^(id responseData, NSError *error) {
+	[self executeRequestWithPath:@"login" httpMethod:@"POST" parameters:@{@"aadvantageNumber": username, @"password": password} completion:^(id responseData, NSError *error) {
 		NSLog(@"%@ \n Error: %@", responseData, error);
 	}];
 }
@@ -61,15 +61,20 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
 - (void)fetchAccountInformationWithUsername:(NSString *)username password:(NSString *)password completion:(THAAClientCompletionBlock)completion
 {
 	// Fill in
+    [self executeRequestWithPath:@"account" httpMethod:@"GET" parameters:@{@"aadvantageNumber" : username, @"password":password} completion:^(id responseData, NSError *error) {
+        if (completion) {
+            completion(responseData, error);
+        }
+    }];
 }
 
-- (void)executeRequestWithPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(THAAClientCompletionBlock)completion
+- (void)executeRequestWithPath:(NSString *)path httpMethod:(NSString *)method parameters:(NSDictionary *)parameters completion:(THAAClientCompletionBlock)completion
 {
 	NSMutableDictionary *allParameters = [NSMutableDictionary dictionaryWithObject:AAAPIKey forKey:@"apikey"];
 	[allParameters addEntriesFromDictionary:parameters];
 	
 	NSMutableURLRequest *request = [self.httpClient requestWithMethod:@"GET" path:path parameters:allParameters];
-	request.HTTPMethod = @"POST";
+	request.HTTPMethod = method;
 	
 	AFHTTPRequestOperation *operation = [self.httpClient HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
 		if (completion)
