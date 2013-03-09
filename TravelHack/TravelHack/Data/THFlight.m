@@ -30,6 +30,9 @@ static NSDateFormatter *_formatter;
 	self.destinationAirportCode = [dictionary objectForKey:@"destinationAirportCode"];
 	self.flightNumber = [dictionary objectForKey:@"flightKey"];
 	self.destinationCity = [dictionary objectForKey:@"destinationCity"];
+	
+	self.flightStatus = [[THFlightStatus alloc] init];
+	[self.flightStatus configureWithDictionary:[dictionary objectForKey:@"flightStatus"]];
 }
 
 @end

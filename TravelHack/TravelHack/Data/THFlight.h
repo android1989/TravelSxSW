@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "THFlightStatus.h"
 
 @interface THFlight : NSObject
 @property (nonatomic, strong) NSString *depatureDate;
@@ -16,6 +17,7 @@
 @property (nonatomic, strong) NSString *destinationAirportCode;
 @property (nonatomic, strong) NSString *flightNumber;
 @property (nonatomic, strong) NSString *destinationCity;
+@property (nonatomic, strong) THFlightStatus *flightStatus;
 
 - (void)configureWithDictionary:(NSDictionary *)dictionary;
 
