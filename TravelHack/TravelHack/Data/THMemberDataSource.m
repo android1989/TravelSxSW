@@ -26,14 +26,23 @@ extern NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpd
 	{
 		_userName = [username copy];
 		_password = [password copy];
+		
+		[self _fetchAccountInfo];
+		
 	}
 	return self;
 }
 
 - (void)_fetchAccountInfo
 {
-	
+	[self.client fetchAccountInformationWithUsername:self.userName password:self.password completion:^(id responseData, NSError *error) {
+		_account = responseData;
+	}];
 }
 
+- (void)_fetchReservationList
+{
+#warning Implement
+}
 
 @end

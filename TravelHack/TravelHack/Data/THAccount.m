@@ -10,4 +10,16 @@
 
 @implementation THAccount
 
+- (void)configureWithDictionary:(NSDictionary *)dictionary
+{
+	NSDictionary *root = [dictionary objectForKey:@"myAccount"];
+	self.firstName = [root objectForKey:@"firstName"];
+	self.lastName = [root objectForKey:@"lastName"];
+	self.aadvantageNumber = [root objectForKey:@"aadvNumber"];
+	self.tierLevel = [root objectForKey:@"tierLevel"];
+	
+	self.accountBalance = [[THAccountBalance alloc] init];
+	[self.accountBalance configureWithDictionary:[root objectForKey:@"accountBalance"]];
+}
+
 @end

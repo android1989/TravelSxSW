@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "THAccount.h"
+#import "THAAClient.h"
 
 extern NSString * const THMemberDataSourceDidBecomeReadyNotification;
 extern NSString * const THMemberDataSourceDidUpdate;
 
 @interface THMemberDataSource : NSObject
+@property (nonatomic, readonly) THAccount *account;
+@property (nonatomic, strong) THAAClient *client;
 
 - (BOOL)isReady;
 

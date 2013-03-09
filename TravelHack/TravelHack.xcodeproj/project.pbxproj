@@ -26,6 +26,7 @@
 		A0C6495316EBDFA100081AD5 /* THMemberDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6495216EBDFA100081AD5 /* THMemberDataSource.m */; };
 		A0C6495616EBDFC200081AD5 /* THAAMember.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6495516EBDFC200081AD5 /* THAAMember.m */; };
 		A0C6495916EBDFD700081AD5 /* THAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6495816EBDFD700081AD5 /* THAccount.m */; };
+		A0C6495C16EBE5F500081AD5 /* THAccountBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6495B16EBE5F500081AD5 /* THAccountBalance.m */; };
 		AFE3367716EB958300034BA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367616EB958300034BA4 /* UIKit.framework */; };
 		AFE3367916EB958300034BA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367816EB958300034BA4 /* Foundation.framework */; };
 		AFE3367B16EB958300034BA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367A16EB958300034BA4 /* CoreGraphics.framework */; };
@@ -77,6 +78,8 @@
 		A0C6495516EBDFC200081AD5 /* THAAMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THAAMember.m; path = Data/THAAMember.m; sourceTree = "<group>"; };
 		A0C6495716EBDFD700081AD5 /* THAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THAccount.h; path = Data/THAccount.h; sourceTree = "<group>"; };
 		A0C6495816EBDFD700081AD5 /* THAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THAccount.m; path = Data/THAccount.m; sourceTree = "<group>"; };
+		A0C6495A16EBE5F500081AD5 /* THAccountBalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THAccountBalance.h; path = Data/THAccountBalance.h; sourceTree = "<group>"; };
+		A0C6495B16EBE5F500081AD5 /* THAccountBalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THAccountBalance.m; path = Data/THAccountBalance.m; sourceTree = "<group>"; };
 		AFE3367316EB958300034BA4 /* TravelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE3367616EB958300034BA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFE3367816EB958300034BA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -186,6 +189,8 @@
 				A0C6495516EBDFC200081AD5 /* THAAMember.m */,
 				A0C6495716EBDFD700081AD5 /* THAccount.h */,
 				A0C6495816EBDFD700081AD5 /* THAccount.m */,
+				A0C6495A16EBE5F500081AD5 /* THAccountBalance.h */,
+				A0C6495B16EBE5F500081AD5 /* THAccountBalance.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				A0C6495316EBDFA100081AD5 /* THMemberDataSource.m in Sources */,
 				A0C6495616EBDFC200081AD5 /* THAAMember.m in Sources */,
 				A0C6495916EBDFD700081AD5 /* THAccount.m in Sources */,
+				A0C6495C16EBE5F500081AD5 /* THAccountBalance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
