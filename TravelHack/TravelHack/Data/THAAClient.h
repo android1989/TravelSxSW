@@ -19,4 +19,6 @@ typedef void(^THAAClientCompletionBlock)(id responseData, NSError *error);
 
 - (void)fetchAccountInformationWithUsername:(NSString *)username password:(NSString *)password completion:(THAAClientCompletionBlock)completion;
 
+- (void)fetchReservationListWithUsername:(NSString *)username password:(NSString *)password completion:(THAAClientCompletionBlock)completion;
+
 @end
