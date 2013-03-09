@@ -7,6 +7,7 @@
 //
 
 #import "THAppDelegate.h"
+#import "DCIntrospect.h"
 
 @implementation THAppDelegate
 
@@ -16,6 +17,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+#if TARGET_IPHONE_SIMULATOR
+	[[DCIntrospect sharedIntrospector] start];
+#endif
+	
     return YES;
 }
 

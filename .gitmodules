@@ -1,0 +1,6 @@
+[submodule "DCIntrospect"]
+	path = DCIntrospect
+	url = https://github.com/domesticcatsoftware/DCIntrospect.git
+[submodule "AFNetworking"]
+	path = AFNetworking
+	url = git://github.com/AFNetworking/AFNetworking.git
