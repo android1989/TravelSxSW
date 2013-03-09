@@ -30,7 +30,6 @@
 		AFE3368916EB958300034BA4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE3368816EB958300034BA4 /* Default.png */; };
 		AFE3368B16EB958300034BA4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE3368A16EB958300034BA4 /* Default@2x.png */; };
 		AFE3368D16EB958300034BA4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE3368C16EB958300034BA4 /* Default-568h@2x.png */; };
-		AFE3369716EBA9DB00034BA4 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3369616EBA9DB00034BA4 /* JSONKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +62,7 @@
 		589875A116EB9D63008A24A1 /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
 		589875A216EB9D63008A24A1 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		589875A816EB9F1F008A24A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		58DE623B16EBC10400C7A2B3 /* THConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = THConstants.h; path = Common/THConstants.h; sourceTree = "<group>"; };
 		AFE3367316EB958300034BA4 /* TravelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE3367616EB958300034BA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFE3367816EB958300034BA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,8 +76,6 @@
 		AFE3368816EB958300034BA4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AFE3368A16EB958300034BA4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AFE3368C16EB958300034BA4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		AFE3369516EBA9DB00034BA4 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		AFE3369616EBA9DB00034BA4 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,10 +178,10 @@
 		AFE3367C16EB958300034BA4 /* TravelHack */ = {
 			isa = PBXGroup;
 			children = (
-				AFE3369316EBA9DB00034BA4 /* Shared */,
 				AFE3368516EB958300034BA4 /* THAppDelegate.h */,
 				AFE3368616EB958300034BA4 /* THAppDelegate.m */,
 				AFE3367D16EB958300034BA4 /* Supporting Files */,
+				58DE623B16EBC10400C7A2B3 /* THConstants.h */,
 			);
 			path = TravelHack;
 			sourceTree = "<group>";
@@ -200,23 +198,6 @@
 				AFE3368C16EB958300034BA4 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AFE3369316EBA9DB00034BA4 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				AFE3369416EBA9DB00034BA4 /* JsonKit */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		AFE3369416EBA9DB00034BA4 /* JsonKit */ = {
-			isa = PBXGroup;
-			children = (
-				AFE3369516EBA9DB00034BA4 /* JSONKit.h */,
-				AFE3369616EBA9DB00034BA4 /* JSONKit.m */,
-			);
-			path = JsonKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +281,6 @@
 				589875A416EB9D63008A24A1 /* DCFrameView.m in Sources */,
 				589875A516EB9D63008A24A1 /* DCIntrospect.m in Sources */,
 				589875A616EB9D63008A24A1 /* DCStatusBarOverlay.m in Sources */,
-				AFE3369716EBA9DB00034BA4 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
