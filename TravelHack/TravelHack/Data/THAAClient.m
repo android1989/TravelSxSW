@@ -87,6 +87,33 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
     }];
 }
 
+- (void)fetchFlightStatusWithFlight:(THFlight *)flight account:(THAccount *)account completion:(THAAClientCompletionBlock)completion
+{
+    NSString *departureMonth = @"";
+    NSString *departureDay = @"";
+    NSString *flightNumber = @"";
+    NSString *originCode = @"";
+    NSString *departureTime = @"";
+    NSString *lastName = @"";
+    NSString *firstName = @"";
+    NSString *seatNo = @"";
+    NSString *travelId = @"";
+    NSString *segmentId = @"";
+    NSString *recordLocator = @"";
+    
+    NSMutableDictionary *parameters = @{@"departureMonth": departureMonth, @"departureDay":departureDay , @"flightNumber": flightNumber, @"departureTime": departureTime, @"lastName" : lastName, @"firstName":firstName , @"seatNo" : seatNo, @"travelId" : travelId, @"segmentId" : segmentId, @"recordlocator": recordLocator};
+    
+    
+    [self executeRequestWithPath:@"flightStatus" httpMethod:@"GET" parameters:parameters completion:^(id responseData, NSError *error) {
+        if (completion) {
+            if (completion) {
+                completion(responseData, error);
+            }
+        }
+    }];
+}
+
+
 - (void)executeRequestWithPath:(NSString *)path httpMethod:(NSString *)method parameters:(NSDictionary *)parameters completion:(THAAClientCompletionBlock)completion
 {
 	NSMutableDictionary *allParameters = [NSMutableDictionary dictionaryWithObject:AAAPIKey forKey:@"apikey"];
