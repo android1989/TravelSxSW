@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^THAAClientCompletionBlock)(id responseData, NSError *error);
+
 @interface THAAClient : NSObject
 
 + (THAAClient *)client;
