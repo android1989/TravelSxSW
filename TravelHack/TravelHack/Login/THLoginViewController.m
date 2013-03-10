@@ -34,8 +34,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	self.aaNumber.text = AAADVANTAGE_NUMBER;
-	self.password.text = PASSWORD;
+	self.aaNumber.text = AADVANTAGE_NUMBER;
+	self.password.text = AADVANTAGE_PASSWORD;
 }
 
 - (void)didReceiveMemoryWarning
