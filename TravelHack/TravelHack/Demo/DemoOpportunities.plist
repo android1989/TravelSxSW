@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Starbucks</string>
+		<key>pointValue</key>
+		<integer>100</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryCoffee</string>
+		<key>location</key>
+		<string>DFW</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Gate Check-In</string>
+		<key>pointValue</key>
+		<integer>200</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryGateCheckin</string>
+		<key>location</key>
+		<string>DFW</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Lone Star Attitude</string>
+		<key>pointValue</key>
+		<integer>150</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryStore</string>
+		<key>location</key>
+		<string>C33</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Hudson Booksellers</string>
+		<key>pointValue</key>
+		<integer>250</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryBookStore</string>
+		<key>location</key>
+		<string>C24</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Fox News Channel</string>
+		<key>pointValue</key>
+		<integer>100</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryNewsstand</string>
+		<key>location</key>
+		<string>C19</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Best Buy Express</string>
+		<key>pointValue</key>
+		<integer>25</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryTechKiosk</string>
+		<key>location</key>
+		<string>C32</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Texas Stadium Skybox Bar &amp; Grill</string>
+		<key>pointValue</key>
+		<integer>500</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryBar</string>
+		<key>location</key>
+		<string>C25</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Taco Bell Express</string>
+		<key>pointValue</key>
+		<integer>100</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryFood</string>
+		<key>location</key>
+		<string>C24</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>American Airlines Admirals Club</string>
+		<key>pointValue</key>
+		<integer>750</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryAirlineLounge</string>
+		<key>location</key>
+		<string>C20</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Check Bags</string>
+		<key>pointValue</key>
+		<integer>50</integer>
+		<key>date</key>
+		<string>03/29/13</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryBagCheck</string>
+		<key>location</key>
+		<string>Terminal C Curbside</string>
+	</dict>
+</array>
+</plist>
