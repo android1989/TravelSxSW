@@ -10,6 +10,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import "THOpportunity.h"
 #import "THOpportunityDemoFactory.h"
+#import "THOpportunityImageFactory.h"
 
 @interface THMapViewController ()
 @property (nonatomic, strong) CMMotionManager *motionManager;
@@ -105,7 +106,7 @@
 
 - (UIImage *)imageForOpportunity:(THOpportunity *)opportunity
 {
-	return [UIImage imageNamed:@"coffee_table_cell"];
+	return [THOpportunityImageFactory imageForOpportunity:opportunity];
 }
 
 @end
