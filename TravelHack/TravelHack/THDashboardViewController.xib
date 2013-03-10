@@ -111,7 +111,6 @@
 								<string key="NSFrame">{{0, -218}, {320, 548}}</string>
 								<reference key="NSSuperview" ref="529007148"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -171,13 +170,6 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1026356665"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<object class="NSColor" key="IBUIBackgroundColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MQA</bytes>
-									<object class="NSColorSpace" key="NSCustomColorSpace" id="424708110">
-										<int key="NSID">2</int>
-									</object>
-								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
@@ -362,7 +354,7 @@
 							<object class="IBUILabel" id="561378094">
 								<reference key="NSNextResponder" ref="1026356665"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{10, 142}, {161, 32}}</string>
+								<string key="NSFrame">{{8, 142}, {161, 34}}</string>
 								<reference key="NSSuperview" ref="1026356665"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="363811607"/>
@@ -379,13 +371,15 @@
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="12781676">
-									<int key="type">1</int>
-									<double key="pointSize">17</double>
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="785734168">
+									<string key="name">HelveticaNeue-CondensedBold</string>
+									<string key="family">Helvetica Neue</string>
+									<int key="traits">2</int>
+									<double key="pointSize">30</double>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="390557224">
-									<string key="NSName">Helvetica</string>
-									<double key="NSSize">17</double>
+								<object class="NSFont" key="IBUIFont" id="267316384">
+									<string key="NSName">HelveticaNeue-Bold</string>
+									<double key="NSSize">30</double>
 									<int key="NSfFlags">16</int>
 								</object>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
@@ -393,7 +387,7 @@
 							<object class="IBUILabel" id="363811607">
 								<reference key="NSNextResponder" ref="1026356665"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{243, 142}, {66, 21}}</string>
+								<string key="NSFrame">{{193, 142}, {116, 34}}</string>
 								<reference key="NSSuperview" ref="1026356665"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="776771923"/>
@@ -410,14 +404,15 @@
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="12781676"/>
-								<reference key="IBUIFont" ref="390557224"/>
+								<int key="IBUITextAlignment">2</int>
+								<reference key="IBUIFontDescription" ref="785734168"/>
+								<reference key="IBUIFont" ref="267316384"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUILabel" id="776771923">
 								<reference key="NSNextResponder" ref="1026356665"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{10, 176}, {162, 21}}</string>
+								<string key="NSFrame">{{10, 176}, {299, 34}}</string>
 								<reference key="NSSuperview" ref="1026356665"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="634109337"/>
@@ -434,14 +429,14 @@
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="12781676"/>
-								<reference key="IBUIFont" ref="390557224"/>
+								<reference key="IBUIFontDescription" ref="785734168"/>
+								<reference key="IBUIFont" ref="267316384"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUILabel" id="371368754">
 								<reference key="NSNextResponder" ref="1026356665"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{10, 119}, {38, 21}}</string>
+								<string key="NSFrame">{{10, 119}, {73, 21}}</string>
 								<reference key="NSSuperview" ref="1026356665"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="778761787"/>
@@ -458,14 +453,23 @@
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="12781676"/>
-								<reference key="IBUIFont" ref="390557224"/>
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="85216089">
+									<string key="name">HelveticaNeue-Bold</string>
+									<string key="family">Helvetica Neue</string>
+									<int key="traits">2</int>
+									<double key="pointSize">17</double>
+								</object>
+								<object class="NSFont" key="IBUIFont" id="804694189">
+									<string key="NSName">HelveticaNeue-Bold</string>
+									<double key="NSSize">17</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUILabel" id="778761787">
 								<reference key="NSNextResponder" ref="1026356665"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{260, 119}, {49, 21}}</string>
+								<string key="NSFrame">{{223, 119}, {86, 21}}</string>
 								<reference key="NSSuperview" ref="1026356665"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="561378094"/>
@@ -482,8 +486,9 @@
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="12781676"/>
-								<reference key="IBUIFont" ref="390557224"/>
+								<int key="IBUITextAlignment">2</int>
+								<reference key="IBUIFontDescription" ref="85216089"/>
+								<reference key="IBUIFont" ref="804694189"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUIImageView" id="1066431021">
@@ -522,7 +527,9 @@
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
-					<reference key="NSCustomColorSpace" ref="424708110"/>
+					<object class="NSColorSpace" key="NSCustomColorSpace">
+						<int key="NSID">2</int>
+					</object>
 				</object>
 				<reference key="IBUISimulatedStatusBarMetrics" ref="811003240"/>
 				<reference key="IBUISimulatedDestinationMetrics" ref="541584693"/>
@@ -742,11 +749,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">splitViewTouchUpInside:</string>
+						<string key="label">splitViewTopTouchUpInside:</string>
 						<reference key="source" ref="689397714"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
-					<int key="connectionID">41</int>
+					<int key="connectionID">77</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -758,11 +765,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">splitViewTouchUpInside:</string>
+						<string key="label">splitViewBottomTouchUpInside:</string>
 						<reference key="source" ref="936894265"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
-					<int key="connectionID">43</int>
+					<int key="connectionID">78</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -836,13 +843,13 @@
 							<reference ref="363811607"/>
 							<reference ref="776771923"/>
 							<reference ref="371368754"/>
-							<reference ref="778761787"/>
 							<reference ref="634109337"/>
 							<reference ref="246602657"/>
 							<reference ref="23555337"/>
 							<reference ref="136318258"/>
 							<reference ref="672509239"/>
 							<reference ref="1066431021"/>
+							<reference ref="778761787"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -1029,7 +1036,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">76</int>
+			<int key="maxID">78</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1037,16 +1044,21 @@
 					<string key="className">THDashboardViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="splitViewBottomTouchUpInside:">id</string>
 						<string key="splitViewDidPan:">UIPanGestureRecognizer</string>
-						<string key="splitViewTouchUpInside:">UITapGestureRecognizer</string>
+						<string key="splitViewTopTouchUpInside:">UITapGestureRecognizer</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="splitViewBottomTouchUpInside:">
+							<string key="name">splitViewBottomTouchUpInside:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="splitViewDidPan:">
 							<string key="name">splitViewDidPan:</string>
 							<string key="candidateClassName">UIPanGestureRecognizer</string>
 						</object>
-						<object class="IBActionInfo" key="splitViewTouchUpInside:">
-							<string key="name">splitViewTouchUpInside:</string>
+						<object class="IBActionInfo" key="splitViewTopTouchUpInside:">
+							<string key="name">splitViewTopTouchUpInside:</string>
 							<string key="candidateClassName">UITapGestureRecognizer</string>
 						</object>
 					</dictionary>

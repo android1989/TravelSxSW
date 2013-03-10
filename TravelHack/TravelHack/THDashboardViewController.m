@@ -104,7 +104,7 @@
     }
 }
 
-- (IBAction)splitViewTouchUpInside:(UITapGestureRecognizer *)recognizer
+- (IBAction)splitViewTopTouchUpInside:(UITapGestureRecognizer *)recognizer
 {
     if (!self.isSplitViewOpen)
     {
@@ -122,12 +122,8 @@
         }];
     }else{
         [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            if (!self.isDown)
-            {
-                [recognizer.view.superview setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 218)];
-            }else{
-                [recognizer.view.superview setFrame:CGRectMake(0, CGRectGetHeight(self.view.frame)-218, CGRectGetWidth(self.view.bounds), 218)];
-            }
+            
+            [recognizer.view.superview setFrame:CGRectMake(0, CGRectGetHeight(self.view.frame)-218, CGRectGetWidth(self.view.bounds), 218)];
             
             
             [self.mapView setFrame:CGRectMake(CGRectGetMinX(self.mapView.frame), CGRectGetMinY(self.mapView.frame), CGRectGetWidth(self.mapView.frame), CGRectGetMinY(recognizer.view.superview.frame))];
@@ -140,7 +136,40 @@
             
         }];
     }
-    
-    
+}
+
+- (IBAction)splitViewBottomTouchUpInside:(UITapGestureRecognizer *)recognizer
+{
+    if (!self.isSplitViewOpen)
+    {
+        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            [recognizer.view.superview setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
+            
+            [self.mapView setFrame:CGRectMake(CGRectGetMinX(self.mapView.frame), CGRectGetMinY(self.mapView.frame), CGRectGetWidth(self.mapView.frame), CGRectGetMinY(recognizer.view.superview.frame))];
+            
+            [self.pastView setFrame:CGRectMake(CGRectGetMinX(self.pastView.frame), CGRectGetMaxY(recognizer.view.superview.frame), CGRectGetWidth(self.pastView.frame), CGRectGetHeight(self.view.frame)-CGRectGetMaxY(recognizer.view.superview.frame))];
+            
+            [self.splitViewController split];
+        } completion:^(BOOL finished) {
+            self.isSplitViewOpen = YES;
+            
+        }];
+    }else{
+        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            
+            [recognizer.view.superview setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 218)];
+
+            
+            [self.mapView setFrame:CGRectMake(CGRectGetMinX(self.mapView.frame), CGRectGetMinY(self.mapView.frame), CGRectGetWidth(self.mapView.frame), CGRectGetMinY(recognizer.view.superview.frame))];
+            
+            [self.pastView setFrame:CGRectMake(CGRectGetMinX(self.pastView.frame), CGRectGetMaxY(recognizer.view.superview.frame), CGRectGetWidth(self.pastView.frame), CGRectGetHeight(self.view.frame)-CGRectGetMaxY(recognizer.view.superview.frame))];
+            
+            [self.splitViewController join];
+        } completion:^(BOOL finished) {
+            self.isSplitViewOpen = NO;
+            
+        }];
+    }
+
 }
 @end
