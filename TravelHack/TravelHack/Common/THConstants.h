@@ -13,11 +13,11 @@
 #define LOCATION_SMART_API_PWD		@"5eac22d2"
 #define LOCATION_SMART_CLIENT_ID	@"SXSW-0054"
 
-#define AAADVANTAGE_NUMBER @"592T7E0"
-#define PASSWORD @"testing"
+#define AADVANTAGE_NUMBER		@"592T7E0"
+#define AADVANTAGE_PASSWORD		@"testing"
 
 // Font Names
-#define LEAGUE_GOTHIC_R @"LeagueGothic-Regular"
-#define LEAGUE_GOTHIC_I @"LeagueGothic-Italic"
-#define LEAGUE_GOTHIC_CR @"LeagueGothic-CondensedRegular"
-#define LEAGUE_GOTHIC_CI @"LeagueGothic-CondensedItalic"
+#define LEAGUE_GOTHIC_R		@"LeagueGothic-Regular"
+#define LEAGUE_GOTHIC_I		@"LeagueGothic-Italic"
+#define LEAGUE_GOTHIC_CR	@"LeagueGothic-CondensedRegular"
+#define LEAGUE_GOTHIC_CI	@"LeagueGothic-CondensedItalic"
