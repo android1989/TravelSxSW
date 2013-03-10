@@ -31,4 +31,12 @@
 	[self setValuesForKeysWithDictionary:dictionary];
 }
 
+- (NSString *)terminalDescription
+{
+	if (![self.terminal length])
+		return [NSString stringWithFormat:@"Gate %@", self.gate];
+	else
+		return [NSString stringWithFormat:@"Terminal %@, Gate %@", self.terminal, self.gate];
+}
+
 @end
