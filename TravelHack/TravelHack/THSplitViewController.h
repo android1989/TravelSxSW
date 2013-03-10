@@ -17,6 +17,8 @@
 @property (nonatomic, strong) IBOutlet UILabel *statusLabel;
 @property (nonatomic, strong) IBOutlet UILabel *terminalLabel;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *topSplitView;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomSplitView;
 
 - (void)split;
 - (void)join;

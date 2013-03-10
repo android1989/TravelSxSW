@@ -11,6 +11,11 @@
 
 @implementation THPastOpportunityCell
 
++ (CGFloat)preferredHeight
+{
+	return 75.0f;
+}
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
