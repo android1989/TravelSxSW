@@ -7,9 +7,10 @@
 //
 
 #import "THSplitViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface THSplitViewController ()
-
+@property (nonatomic, strong) IBOutlet UIImageView *splitImage;
 @end
 
 @implementation THSplitViewController
@@ -19,6 +20,15 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        
     }
     return self;
 }
@@ -33,6 +43,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)split
+{
+    [self.splitImage setAlpha:0];
+}
+
+- (void)join
+{
+    [self.splitImage setAlpha:1];
 }
 
 @end

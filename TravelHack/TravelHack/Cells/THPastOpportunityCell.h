@@ -10,4 +10,8 @@
 
 @interface THPastOpportunityCell : UITableViewCell
 
+@property (nonatomic, strong) IBOutlet UILabel *opportunityLabel;
+@property (nonatomic, strong) IBOutlet UILabel *dateLabel;
+@property (nonatomic, strong) IBOutlet UIImageView *opportunityIcon;
+@property (nonatomic, strong) IBOutlet UILabel *pointLabel;
 @end

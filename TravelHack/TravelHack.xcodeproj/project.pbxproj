@@ -52,6 +52,29 @@
 		AFE3368916EB958300034BA4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE3368816EB958300034BA4 /* Default.png */; };
 		AFE3368B16EB958300034BA4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE3368A16EB958300034BA4 /* Default@2x.png */; };
 		AFE3368D16EB958300034BA4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE3368C16EB958300034BA4 /* Default-568h@2x.png */; };
+		AFE336A516EC645900034BA4 /* THSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE336A316EC645900034BA4 /* THSplitViewController.m */; };
+		AFE336A616EC645900034BA4 /* THSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE336A416EC645900034BA4 /* THSplitViewController.xib */; };
+		AFE336AA16EC649F00034BA4 /* THMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE336A816EC649F00034BA4 /* THMapViewController.m */; };
+		AFE336AB16EC649F00034BA4 /* THMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE336A916EC649F00034BA4 /* THMapViewController.xib */; };
+		AFE336AF16EC64D100034BA4 /* THPastOpportunitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE336AD16EC64D100034BA4 /* THPastOpportunitiesViewController.m */; };
+		AFE336B016EC64D100034BA4 /* THPastOpportunitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE336AE16EC64D100034BA4 /* THPastOpportunitiesViewController.xib */; };
+		AFE336B216EC65E200034BA4 /* profile_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336B116EC65E200034BA4 /* profile_bottom@2x.png */; };
+		AFE336B416EC67C500034BA4 /* THDashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE336B316EC67C500034BA4 /* THDashboardViewController.xib */; };
+		AFE336B816EC7AAD00034BA4 /* THPastOpportunityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE336B716EC7AAD00034BA4 /* THPastOpportunityCell.m */; };
+		AFE336BA16EC7AC100034BA4 /* THPastOpportunityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE336B916EC7AC100034BA4 /* THPastOpportunityCell.xib */; };
+		AFE336BC16EC7C1400034BA4 /* coffee_table_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336BB16EC7C1400034BA4 /* coffee_table_cell.png */; };
+		AFE336BE16EC85BB00034BA4 /* tableViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336BD16EC85BB00034BA4 /* tableViewBackground.png */; };
+		AFE336C016EC872700034BA4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336BF16EC872700034BA4 /* background.png */; };
+		AFE336C216EC87A300034BA4 /* map_background.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C116EC87A300034BA4 /* map_background.png */; };
+		AFE336C416EC8D1400034BA4 /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C316EC8D1400034BA4 /* shadow.png */; };
+		AFE336C616EC8D6C00034BA4 /* shadow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C516EC8D6C00034BA4 /* shadow_up.png */; };
+		AFE336C816EC8E7900034BA4 /* split_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C716EC8E7900034BA4 /* split_bar.png */; };
+		AFE336CA16EC91F100034BA4 /* login_button.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C916EC91F100034BA4 /* login_button.png */; };
+		AFE336CC16EC91FA00034BA4 /* splash_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336CB16EC91FA00034BA4 /* splash_screen.png */; };
+		AFE336CE16EC920B00034BA4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336CD16EC920B00034BA4 /* Default-568h@2x.png */; };
+		AFE336D316EC924D00034BA4 /* THLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE336D116EC924D00034BA4 /* THLoginViewController.m */; };
+		AFE336D416EC924D00034BA4 /* THLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE336D216EC924D00034BA4 /* THLoginViewController.xib */; };
+		AFE336D616EC927300034BA4 /* login_button.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336D516EC927300034BA4 /* login_button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +157,34 @@
 		AFE3368816EB958300034BA4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AFE3368A16EB958300034BA4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AFE3368C16EB958300034BA4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AFE336A216EC645900034BA4 /* THSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THSplitViewController.h; sourceTree = "<group>"; };
+		AFE336A316EC645900034BA4 /* THSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THSplitViewController.m; sourceTree = "<group>"; };
+		AFE336A416EC645900034BA4 /* THSplitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THSplitViewController.xib; sourceTree = "<group>"; };
+		AFE336A716EC649F00034BA4 /* THMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THMapViewController.h; sourceTree = "<group>"; };
+		AFE336A816EC649F00034BA4 /* THMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THMapViewController.m; sourceTree = "<group>"; };
+		AFE336A916EC649F00034BA4 /* THMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THMapViewController.xib; sourceTree = "<group>"; };
+		AFE336AC16EC64D100034BA4 /* THPastOpportunitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THPastOpportunitiesViewController.h; sourceTree = "<group>"; };
+		AFE336AD16EC64D100034BA4 /* THPastOpportunitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THPastOpportunitiesViewController.m; sourceTree = "<group>"; };
+		AFE336AE16EC64D100034BA4 /* THPastOpportunitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THPastOpportunitiesViewController.xib; sourceTree = "<group>"; };
+		AFE336B116EC65E200034BA4 /* profile_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_bottom@2x.png"; sourceTree = "<group>"; };
+		AFE336B316EC67C500034BA4 /* THDashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THDashboardViewController.xib; sourceTree = "<group>"; };
+		AFE336B616EC7AAD00034BA4 /* THPastOpportunityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THPastOpportunityCell.h; sourceTree = "<group>"; };
+		AFE336B716EC7AAD00034BA4 /* THPastOpportunityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THPastOpportunityCell.m; sourceTree = "<group>"; };
+		AFE336B916EC7AC100034BA4 /* THPastOpportunityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THPastOpportunityCell.xib; sourceTree = "<group>"; };
+		AFE336BB16EC7C1400034BA4 /* coffee_table_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee_table_cell.png; sourceTree = "<group>"; };
+		AFE336BD16EC85BB00034BA4 /* tableViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewBackground.png; sourceTree = "<group>"; };
+		AFE336BF16EC872700034BA4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		AFE336C116EC87A300034BA4 /* map_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_background.png; sourceTree = "<group>"; };
+		AFE336C316EC8D1400034BA4 /* shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow.png; sourceTree = "<group>"; };
+		AFE336C516EC8D6C00034BA4 /* shadow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow_up.png; sourceTree = "<group>"; };
+		AFE336C716EC8E7900034BA4 /* split_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = split_bar.png; sourceTree = "<group>"; };
+		AFE336C916EC91F100034BA4 /* login_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button.png; sourceTree = "<group>"; };
+		AFE336CB16EC91FA00034BA4 /* splash_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen.png; sourceTree = "<group>"; };
+		AFE336CD16EC920B00034BA4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AFE336D016EC924D00034BA4 /* THLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLoginViewController.h; sourceTree = "<group>"; };
+		AFE336D116EC924D00034BA4 /* THLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLoginViewController.m; sourceTree = "<group>"; };
+		AFE336D216EC924D00034BA4 /* THLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THLoginViewController.xib; sourceTree = "<group>"; };
+		AFE336D516EC927300034BA4 /* login_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_button.png; path = ../../../../Desktop/login_button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +206,7 @@
 		58196EA516EC39D800479A90 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				AFE336CF16EC923300034BA4 /* Login */,
 				58196EA616EC3A3600479A90 /* Dashboard */,
 			);
 			name = Screens;
@@ -167,6 +219,16 @@
 				58196EA816EC3A6F00479A90 /* THDashboardViewController.m */,
 				58196EAF16EC415200479A90 /* THAccountSummaryView.h */,
 				58196EB016EC415200479A90 /* THAccountSummaryView.m */,
+				AFE336A216EC645900034BA4 /* THSplitViewController.h */,
+				AFE336A316EC645900034BA4 /* THSplitViewController.m */,
+				AFE336A416EC645900034BA4 /* THSplitViewController.xib */,
+				AFE336A716EC649F00034BA4 /* THMapViewController.h */,
+				AFE336A816EC649F00034BA4 /* THMapViewController.m */,
+				AFE336A916EC649F00034BA4 /* THMapViewController.xib */,
+				AFE336AC16EC64D100034BA4 /* THPastOpportunitiesViewController.h */,
+				AFE336AD16EC64D100034BA4 /* THPastOpportunitiesViewController.m */,
+				AFE336AE16EC64D100034BA4 /* THPastOpportunitiesViewController.xib */,
+				AFE336B316EC67C500034BA4 /* THDashboardViewController.xib */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -185,6 +247,17 @@
 		58196EBB16EC544C00479A90 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AFE336D516EC927300034BA4 /* login_button.png */,
+				AFE336CB16EC91FA00034BA4 /* splash_screen.png */,
+				AFE336C916EC91F100034BA4 /* login_button.png */,
+				AFE336C716EC8E7900034BA4 /* split_bar.png */,
+				AFE336C516EC8D6C00034BA4 /* shadow_up.png */,
+				AFE336C316EC8D1400034BA4 /* shadow.png */,
+				AFE336C116EC87A300034BA4 /* map_background.png */,
+				AFE336BF16EC872700034BA4 /* background.png */,
+				AFE336BD16EC85BB00034BA4 /* tableViewBackground.png */,
+				AFE336BB16EC7C1400034BA4 /* coffee_table_cell.png */,
+				AFE336B116EC65E200034BA4 /* profile_bottom@2x.png */,
 				58196EBE16EC5A8000479A90 /* badge@2x.png */,
 				58196EBC16EC544C00479A90 /* profile_top@2x.png */,
 			);
@@ -316,6 +389,7 @@
 		AFE3366A16EB958300034BA4 = {
 			isa = PBXGroup;
 			children = (
+				AFE336CD16EC920B00034BA4 /* Default-568h@2x.png */,
 				589875A716EB9EAD008A24A1 /* Submodules */,
 				AFE3367C16EB958300034BA4 /* TravelHack */,
 				AFE3367516EB958300034BA4 /* Frameworks */,
@@ -346,6 +420,7 @@
 		AFE3367C16EB958300034BA4 /* TravelHack */ = {
 			isa = PBXGroup;
 			children = (
+				AFE336B516EC7A8D00034BA4 /* Cells */,
 				A0C6497216EC467B00081AD5 /* Demo */,
 				58196EA516EC39D800479A90 /* Screens */,
 				584B5EB816EBF71100E15FAC /* Common */,
@@ -374,6 +449,26 @@
 				A0C6497616EC46B600081AD5 /* DemoOpportunities.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFE336B516EC7A8D00034BA4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AFE336B616EC7AAD00034BA4 /* THPastOpportunityCell.h */,
+				AFE336B716EC7AAD00034BA4 /* THPastOpportunityCell.m */,
+				AFE336B916EC7AC100034BA4 /* THPastOpportunityCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AFE336CF16EC923300034BA4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AFE336D016EC924D00034BA4 /* THLoginViewController.h */,
+				AFE336D116EC924D00034BA4 /* THLoginViewController.m */,
+				AFE336D216EC924D00034BA4 /* THLoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +534,24 @@
 				58196EBA16EC473500479A90 /* LeagueGothic-Regular.otf in Resources */,
 				58196EBD16EC544C00479A90 /* profile_top@2x.png in Resources */,
 				58196EBF16EC5A8000479A90 /* badge@2x.png in Resources */,
+				AFE336A616EC645900034BA4 /* THSplitViewController.xib in Resources */,
+				AFE336AB16EC649F00034BA4 /* THMapViewController.xib in Resources */,
+				AFE336B016EC64D100034BA4 /* THPastOpportunitiesViewController.xib in Resources */,
+				AFE336B216EC65E200034BA4 /* profile_bottom@2x.png in Resources */,
+				AFE336B416EC67C500034BA4 /* THDashboardViewController.xib in Resources */,
+				AFE336BA16EC7AC100034BA4 /* THPastOpportunityCell.xib in Resources */,
+				AFE336BC16EC7C1400034BA4 /* coffee_table_cell.png in Resources */,
+				AFE336BE16EC85BB00034BA4 /* tableViewBackground.png in Resources */,
+				AFE336C016EC872700034BA4 /* background.png in Resources */,
+				AFE336C216EC87A300034BA4 /* map_background.png in Resources */,
+				AFE336C416EC8D1400034BA4 /* shadow.png in Resources */,
+				AFE336C616EC8D6C00034BA4 /* shadow_up.png in Resources */,
+				AFE336C816EC8E7900034BA4 /* split_bar.png in Resources */,
+				AFE336CA16EC91F100034BA4 /* login_button.png in Resources */,
+				AFE336CC16EC91FA00034BA4 /* splash_screen.png in Resources */,
+				AFE336CE16EC920B00034BA4 /* Default-568h@2x.png in Resources */,
+				AFE336D416EC924D00034BA4 /* THLoginViewController.xib in Resources */,
+				AFE336D616EC927300034BA4 /* login_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +591,11 @@
 				A0C6497516EC469000081AD5 /* THOpportunityDemoFactory.m in Sources */,
 				58196EB116EC415200479A90 /* THAccountSummaryView.m in Sources */,
 				58196EC016EC5D7700479A90 /* THZuluDateFormatter.m in Sources */,
+				AFE336A516EC645900034BA4 /* THSplitViewController.m in Sources */,
+				AFE336AA16EC649F00034BA4 /* THMapViewController.m in Sources */,
+				AFE336AF16EC64D100034BA4 /* THPastOpportunitiesViewController.m in Sources */,
+				AFE336B816EC7AAD00034BA4 /* THPastOpportunityCell.m in Sources */,
+				AFE336D316EC924D00034BA4 /* THLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"THPastOpportunityCell" owner:self options:nil];
+        [self addSubview:[array objectAtIndex:0]];
     }
     return self;
 }

@@ -10,4 +10,13 @@
 
 @interface THSplitViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UILabel *pointsLabel;
+@property (nonatomic, strong) IBOutlet UILabel *staticTimeLabel;
+@property (nonatomic, strong) IBOutlet UILabel *staticStatusLabel;
+@property (nonatomic, strong) IBOutlet UILabel *timeLabel;
+@property (nonatomic, strong) IBOutlet UILabel *statusLabel;
+@property (nonatomic, strong) IBOutlet UILabel *terminalLabel;
+
+- (void)split;
+- (void)join;
 @end

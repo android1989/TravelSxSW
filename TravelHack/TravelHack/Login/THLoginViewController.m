@@ -9,7 +9,8 @@
 #import "THLoginViewController.h"
 
 @interface THLoginViewController ()
-
+@property (nonatomic, strong) IBOutlet UITextField *aaNumber;
+@property (nonatomic, strong) IBOutlet UITextField *password;
 @end
 
 @implementation THLoginViewController
@@ -33,6 +34,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)dismissKeyboard:(id)sender
+{
+    [self.aaNumber resignFirstResponder];
+    [self.password resignFirstResponder];
+}
+
+- (IBAction)login:(id)sender
+{
+    
 }
 
 @end
