@@ -54,6 +54,9 @@ static NSString * const THMapViewAssociatedOpportunity = @"THMapViewAssociatedOp
 	[self.notificationView addSubview:imageView];
 	[self.notificationView sendSubviewToBack:imageView];
 	
+	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissOpportunity)];
+	[self.notificationView addGestureRecognizer:tapGesture];
+	
 	[self.view addSubview:self.notificationView];
 }
 
@@ -125,7 +128,7 @@ static NSString * const THMapViewAssociatedOpportunity = @"THMapViewAssociatedOp
 	[self.view bringSubviewToFront:self.notificationView];
 	[self.notificationView setOpportunity:opportunity];
 	
-	[UIView animateWithDuration:0.5 animations:^{
+	[UIView animateWithDuration:0.4 animations:^{
 		self.notificationView.frame = self.notificationView.bounds;
 	} completion:^(BOOL finished) {
 		[self performSelector:@selector(dismissOpportunity) withObject:nil afterDelay:3.0];
@@ -134,7 +137,7 @@ static NSString * const THMapViewAssociatedOpportunity = @"THMapViewAssociatedOp
 
 - (void)dismissOpportunity
 {
-	[UIView animateWithDuration:0.5 animations:^{
+	[UIView animateWithDuration:0.3 animations:^{
 		self.notificationView.frame = CGRectOffset(self.notificationView.bounds, 0.0, -CGRectGetHeight(self.notificationView.bounds));
 	}];
 }

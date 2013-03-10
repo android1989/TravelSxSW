@@ -32,7 +32,7 @@
 	self = [super initWithCoder:aDecoder];
 	if (self)
 	{
-		NSLog(@"%@", self.pointLabel);
+		
 	}
 	return self;
 }
