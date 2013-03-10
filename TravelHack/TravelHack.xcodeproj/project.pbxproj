@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58196EAA16EC3A6F00479A90 /* THDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58196EA816EC3A6F00479A90 /* THDashboardViewController.m */; };
+		58196EAE16EC3E0700479A90 /* THZuluDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 58196EAD16EC3E0700479A90 /* THZuluDateFormatter.m */; };
 		5898759016EB9D54008A24A1 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898757E16EB9D54008A24A1 /* AFHTTPClient.m */; };
 		5898759116EB9D54008A24A1 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898758016EB9D54008A24A1 /* AFHTTPRequestOperation.m */; };
 		5898759216EB9D54008A24A1 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898758216EB9D54008A24A1 /* AFImageRequestOperation.m */; };
@@ -44,6 +46,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58196EA716EC3A6F00479A90 /* THDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDashboardViewController.h; sourceTree = "<group>"; };
+		58196EA816EC3A6F00479A90 /* THDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDashboardViewController.m; sourceTree = "<group>"; };
+		58196EAC16EC3E0700479A90 /* THZuluDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THZuluDateFormatter.h; path = Data/THZuluDateFormatter.h; sourceTree = "<group>"; };
+		58196EAD16EC3E0700479A90 /* THZuluDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THZuluDateFormatter.m; path = Data/THZuluDateFormatter.m; sourceTree = "<group>"; };
+		584B5EB916EBF71100E15FAC /* THConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THConstants.h; sourceTree = "<group>"; };
 		5898757D16EB9D54008A24A1 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		5898757E16EB9D54008A24A1 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		5898757F16EB9D54008A24A1 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -73,7 +80,6 @@
 		589875A116EB9D63008A24A1 /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
 		589875A216EB9D63008A24A1 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		589875A816EB9F1F008A24A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		58DE623B16EBC10400C7A2B3 /* THConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = THConstants.h; path = Common/THConstants.h; sourceTree = "<group>"; };
 		A0C6492916EBD13E00081AD5 /* THAAClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THAAClient.h; path = Data/THAAClient.h; sourceTree = "<group>"; };
 		A0C6492A16EBD13E00081AD5 /* THAAClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THAAClient.m; path = Data/THAAClient.m; sourceTree = "<group>"; };
 		A0C6494E16EBD69700081AD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -126,6 +132,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58196EA516EC39D800479A90 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				58196EA616EC3A3600479A90 /* Dashboard */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		58196EA616EC3A3600479A90 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				58196EA716EC3A6F00479A90 /* THDashboardViewController.h */,
+				58196EA816EC3A6F00479A90 /* THDashboardViewController.m */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
+		584B5EB816EBF71100E15FAC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				584B5EB916EBF71100E15FAC /* THConstants.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		5898757C16EB9D54008A24A1 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,13 +219,6 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
-		A0C6492C16EBD5A700081AD5 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		A0C6495016EBDF8000081AD5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +262,6 @@
 		AFE3366A16EB958300034BA4 = {
 			isa = PBXGroup;
 			children = (
-				A0C6494E16EBD69700081AD5 /* SystemConfiguration.framework */,
 				589875A716EB9EAD008A24A1 /* Submodules */,
 				AFE3367C16EB958300034BA4 /* TravelHack */,
 				AFE3367516EB958300034BA4 /* Frameworks */,
@@ -257,6 +280,7 @@
 		AFE3367516EB958300034BA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0C6494E16EBD69700081AD5 /* SystemConfiguration.framework */,
 				AFE3367A16EB958300034BA4 /* CoreGraphics.framework */,
 				AFE3367816EB958300034BA4 /* Foundation.framework */,
 				589875A816EB9F1F008A24A1 /* QuartzCore.framework */,
@@ -268,14 +292,13 @@
 		AFE3367C16EB958300034BA4 /* TravelHack */ = {
 			isa = PBXGroup;
 			children = (
-				A0C6496616EBFDDF00081AD5 /* Formatter */,
+				58196EA516EC39D800479A90 /* Screens */,
+				584B5EB816EBF71100E15FAC /* Common */,
 				A0C6495016EBDF8000081AD5 /* Data */,
-				A0C6492C16EBD5A700081AD5 /* Shared */,
 				A0C6492816EBD12400081AD5 /* Networking */,
+				AFE3367D16EB958300034BA4 /* Supporting Files */,
 				AFE3368516EB958300034BA4 /* THAppDelegate.h */,
 				AFE3368616EB958300034BA4 /* THAppDelegate.m */,
-				AFE3367D16EB958300034BA4 /* Supporting Files */,
-				58DE623B16EBC10400C7A2B3 /* THConstants.h */,
 			);
 			path = TravelHack;
 			sourceTree = "<group>";

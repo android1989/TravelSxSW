@@ -12,18 +12,31 @@
 #import "THMemberDataSource.h"
 #import "THNLClient.h"
 
-#define AAADVANTAGE_NUMBER @"592T7E0"
-#define PASSWORD @"testing"
-
 @interface THAppDelegate()
+
 @property (nonatomic, strong) THMemberDataSource *memberDataSource;
+
 @end
 
 @implementation THAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	
+	dispatch_async(dispatch_get_main_queue(), ^{
+		self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
+		
+		[[THAAClient client] loginWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
+		[[THAAClient client] fetchAccountInformationWithUsername:AAADVANTAGE_NUMBER password:PASSWORD completion:^(id responseData, NSError *error) {
+			NSLog(@"Account Info: %@", error);
+		}];
+		
+		[[THAAClient client] fetchReservationListWithUsername:AAADVANTAGE_NUMBER password:PASSWORD completion:^(id responseData, NSError *error) {
+			NSLog(@"Account Info: %@", error);
+		}];
+	});
+	
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
