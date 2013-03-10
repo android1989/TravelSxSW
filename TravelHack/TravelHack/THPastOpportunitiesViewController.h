@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class THOpportunity;
 
 @interface THPastOpportunitiesViewController : UIViewController
-
+- (void)simulateOpportunity:(THOpportunity*)op;
 @end

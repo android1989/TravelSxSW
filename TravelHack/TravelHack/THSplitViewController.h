@@ -22,4 +22,6 @@
 
 - (void)split;
 - (void)join;
+- (void)incrementMiles:(NSInteger)addition basePoints:(NSInteger)basePoints;
+- (void)decrementMiles:(NSInteger)subtraction basePoints:(NSInteger)basePoints;
 @end

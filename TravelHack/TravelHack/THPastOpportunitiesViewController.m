@@ -96,4 +96,19 @@
 	self.opportunitiesTableView.frame = CGRectMake(0.0, CGRectGetHeight(self.view.bounds) - CGRectGetHeight(frame), CGRectGetWidth(frame), CGRectGetHeight(frame));
 	self.imageView.frame = frame;
 }
+
+- (void)simulateOpportunity:(THOpportunity*)op
+{
+    NSArray *insertIndexPaths = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+    [self.opportunities insertObject:op atIndex:0];
+    // [self.dataForList count] is 1 now
+    
+    [self.opportunitiesTableView beginUpdates];
+    [self.opportunitiesTableView insertRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationTop];
+    [self.opportunitiesTableView endUpdates];
+    
+}
+
+
 @end

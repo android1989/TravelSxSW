@@ -11,6 +11,7 @@
 #import "THSplitViewController.h"
 #import "THPastOpportunitiesViewController.h"
 #import "THMapViewController.h"
+#import "THOpportunity.h"
 
 @interface THDashboardViewController () <UIGestureRecognizerDelegate>
 
@@ -56,6 +57,20 @@
 	self.accountSummaryView = summaryView;*/
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    CGPoint finalPoint = CGPointMake(self.splitViewController.view.center.x,
+                                     CGRectGetHeight(self.view.bounds) - CGRectGetHeight(self.splitViewController.view.bounds)/2.0f);
+    
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.splitViewController.view.center = finalPoint;
+        [self.mapView setFrame:CGRectMake(CGRectGetMinX(self.mapView.frame), 0, CGRectGetWidth(self.mapView.frame), CGRectGetMinY(self.splitViewController.view.frame))];
+        
+        [self.pastView setFrame:CGRectMake(CGRectGetMinX(self.pastView.frame), CGRectGetMaxY(self.splitViewController.view.frame), CGRectGetWidth(self.pastView.frame), CGRectGetHeight(self.view.frame)-CGRectGetMaxY(self.splitViewController.view.frame))];
+        
+    } completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -75,6 +90,8 @@
 	self.splitViewController.statusLabel.text = flight.flightStatus.status;
 	self.splitViewController.nameLabel.text = [NSString stringWithFormat:@"%@ %@", account.firstName, account.lastName];
 	self.splitViewController.terminalLabel.text = flight.flightStatus.originInfo.terminalDescription;
+	self.flightDescription.text = [flight flightDescription];
+	
 	[self.splitViewController.view setNeedsLayout];
 	
 	/*
@@ -91,6 +108,11 @@
 
 - (IBAction)splitViewDidPan:(UIPanGestureRecognizer *)recognizer
 {
+    if (self.isSplitViewOpen)
+    {
+        return;
+    }
+    
     CGPoint translation = [recognizer translationInView:self.view];
     recognizer.view.center = CGPointMake(recognizer.view.center.x,
                                          recognizer.view.center.y + translation.y);
@@ -122,6 +144,7 @@
         
         [UIView animateWithDuration:finalVelocity delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             recognizer.view.center = finalPoint;
+            
             [self.mapView setFrame:CGRectMake(CGRectGetMinX(self.mapView.frame), 0, CGRectGetWidth(self.mapView.frame), CGRectGetMinY(recognizer.view.frame))];
             
             [self.pastView setFrame:CGRectMake(CGRectGetMinX(self.pastView.frame), CGRectGetMaxY(recognizer.view.frame), CGRectGetWidth(self.pastView.frame), CGRectGetHeight(self.view.frame)-CGRectGetMaxY(recognizer.view.frame))];
@@ -139,7 +162,7 @@
 {
     if (!self.isSplitViewOpen)
     {
-        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:.4 delay:0 options:UIViewAnimationOptionCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
             [recognizer.view.superview setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
             
             [self.mapView setFrame:CGRectMake(CGRectGetMinX(self.mapView.frame), CGRectGetMinY(self.mapView.frame), CGRectGetWidth(self.mapView.frame), CGRectGetMinY(recognizer.view.superview.frame))];
@@ -152,7 +175,7 @@
             
         }];
     }else{
-        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:.4 delay:0 options:UIViewAnimationOptionCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
             
             [recognizer.view.superview setFrame:CGRectMake(0, CGRectGetHeight(self.view.frame)-218, CGRectGetWidth(self.view.bounds), 218)];
             
@@ -173,7 +196,7 @@
 {
     if (!self.isSplitViewOpen)
     {
-        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:.4 delay:0 options:UIViewAnimationOptionCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
             [recognizer.view.superview setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
             
             [self.mapView setFrame:CGRectMake(CGRectGetMinX(self.mapView.frame), CGRectGetMinY(self.mapView.frame), CGRectGetWidth(self.mapView.frame), CGRectGetMinY(recognizer.view.superview.frame))];
@@ -186,7 +209,7 @@
             
         }];
     }else{
-        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:.4 delay:0 options:UIViewAnimationOptionCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
             
             [recognizer.view.superview setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 218)];
 
@@ -201,7 +224,52 @@
             
         }];
     }
+}
 
+- (IBAction)simulateOpportuniy:(id)sender
+{
+    THOpportunity *op = [self randomOpportunity];
+    THAccount *account = self.dataSource.account;
+    [self.splitViewController incrementMiles:[op.pointValue integerValue] basePoints:[account.accountBalance.awardMileage integerValue]];
+    [self.pastViewController simulateOpportunity:op];
+    
+    account.accountBalance.awardMileage = [NSNumber numberWithInt:[account.accountBalance.awardMileage integerValue]+[op.pointValue integerValue]];
+    
+}
+
+- (THOpportunity*)randomOpportunity
+{
+    THOpportunity *op = [[THOpportunity alloc] init];
+    int randomOp = rand()%5;
+    switch (randomOp) {
+        case 0:
+            op.title = @"Gate Check-in";
+            op.category = THOpportunityCategoryGateCheckin;
+            break;
+        case 1:
+            op.title = @"Flight Check-in";
+            op.category = THOpportunityCategoryFlightCheckin;
+            break;
+        case 2:
+            op.title = @"Chili's";
+            op.category = THOpportunityCategoryFood;
+            break;
+        case 3:
+            op.title = @"Brookstone";
+            op.category = THOpportunityCategoryNewsstand;
+            break;
+        case 4:
+            op.title = @"Best Buy Kiosk";
+            op.category = THOpportunityCategoryTechKiosk;
+            break;
+        default:
+            break;
+    }
+    op.pointValue  = [NSNumber numberWithInt:(rand()%3)*100];
+    op.date = @"03/10/13";
+    op.location = @"AUS";
+    op.distance = 0;
+    return op;
 }
 
 #pragma mark - 
