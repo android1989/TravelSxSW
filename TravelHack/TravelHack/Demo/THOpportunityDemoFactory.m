@@ -27,4 +27,9 @@
 	return opportunities;
 }
 
++ (NSArray *)reedemableOpportunities
+{
+	return [self opportunities];
+}
+
 @end

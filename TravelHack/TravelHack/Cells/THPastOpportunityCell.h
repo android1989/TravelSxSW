@@ -17,4 +17,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *pointLabel;
 
 - (void)setOpportunity:(THOpportunity *)opportunity;
+
++ (CGFloat)preferredHeight;
+
 @end

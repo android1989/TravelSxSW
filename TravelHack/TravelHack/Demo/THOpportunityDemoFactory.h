@@ -12,4 +12,6 @@
 
 + (NSArray *)opportunities;
 
++ (NSArray *)reedemableOpportunities;
+
 @end
