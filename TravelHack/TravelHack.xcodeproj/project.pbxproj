@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58196EAA16EC3A6F00479A90 /* THDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58196EA816EC3A6F00479A90 /* THDashboardViewController.m */; };
+		58196EAE16EC3E0700479A90 /* THZuluDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 58196EAD16EC3E0700479A90 /* THZuluDateFormatter.m */; };
 		5898759016EB9D54008A24A1 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898757E16EB9D54008A24A1 /* AFHTTPClient.m */; };
 		5898759116EB9D54008A24A1 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898758016EB9D54008A24A1 /* AFHTTPRequestOperation.m */; };
 		5898759216EB9D54008A24A1 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898758216EB9D54008A24A1 /* AFImageRequestOperation.m */; };
@@ -30,7 +32,6 @@
 		A0C6495F16EBEF2A00081AD5 /* THFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6495E16EBEF2A00081AD5 /* THFlight.m */; };
 		A0C6496216EBF02F00081AD5 /* THReservation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6496116EBF02F00081AD5 /* THReservation.m */; };
 		A0C6496516EBF75A00081AD5 /* THFlightStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6496416EBF75900081AD5 /* THFlightStatus.m */; };
-		A0C6496916EBFDFE00081AD5 /* THZuluDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6496816EBFDFE00081AD5 /* THZuluDateFormatter.m */; };
 		AFE3367716EB958300034BA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367616EB958300034BA4 /* UIKit.framework */; };
 		AFE3367916EB958300034BA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367816EB958300034BA4 /* Foundation.framework */; };
 		AFE3367B16EB958300034BA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367A16EB958300034BA4 /* CoreGraphics.framework */; };
@@ -43,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58196EA716EC3A6F00479A90 /* THDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDashboardViewController.h; sourceTree = "<group>"; };
+		58196EA816EC3A6F00479A90 /* THDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDashboardViewController.m; sourceTree = "<group>"; };
+		58196EAC16EC3E0700479A90 /* THZuluDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THZuluDateFormatter.h; path = Data/THZuluDateFormatter.h; sourceTree = "<group>"; };
+		58196EAD16EC3E0700479A90 /* THZuluDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THZuluDateFormatter.m; path = Data/THZuluDateFormatter.m; sourceTree = "<group>"; };
 		584B5EB916EBF71100E15FAC /* THConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THConstants.h; sourceTree = "<group>"; };
 		5898757D16EB9D54008A24A1 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		5898757E16EB9D54008A24A1 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -90,7 +95,6 @@
 		A0C6496116EBF02F00081AD5 /* THReservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THReservation.m; path = Data/THReservation.m; sourceTree = "<group>"; };
 		A0C6496316EBF75900081AD5 /* THFlightStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THFlightStatus.h; path = Data/THFlightStatus.h; sourceTree = "<group>"; };
 		A0C6496416EBF75900081AD5 /* THFlightStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THFlightStatus.m; path = Data/THFlightStatus.m; sourceTree = "<group>"; };
-		A0C6496816EBFDFE00081AD5 /* THZuluDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THZuluDateFormatter.m; path = Data/THZuluDateFormatter.m; sourceTree = "<group>"; };
 		AFE3367316EB958300034BA4 /* TravelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE3367616EB958300034BA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFE3367816EB958300034BA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +126,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58196EA516EC39D800479A90 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				58196EA616EC3A3600479A90 /* Dashboard */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		58196EA616EC3A3600479A90 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				58196EA716EC3A6F00479A90 /* THDashboardViewController.h */,
+				58196EA816EC3A6F00479A90 /* THDashboardViewController.m */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
 		584B5EB816EBF71100E15FAC /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +216,8 @@
 		A0C6495016EBDF8000081AD5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				58196EAC16EC3E0700479A90 /* THZuluDateFormatter.h */,
+				58196EAD16EC3E0700479A90 /* THZuluDateFormatter.m */,
 				A0C6495116EBDFA100081AD5 /* THMemberDataSource.h */,
 				A0C6495216EBDFA100081AD5 /* THMemberDataSource.m */,
 				A0C6495416EBDFC200081AD5 /* THAAMember.h */,
@@ -246,6 +269,7 @@
 		AFE3367C16EB958300034BA4 /* TravelHack */ = {
 			isa = PBXGroup;
 			children = (
+				58196EA516EC39D800479A90 /* Screens */,
 				584B5EB816EBF71100E15FAC /* Common */,
 				A0C6495016EBDF8000081AD5 /* Data */,
 				A0C6492816EBD12400081AD5 /* Networking */,
@@ -359,7 +383,8 @@
 				A0C6495F16EBEF2A00081AD5 /* THFlight.m in Sources */,
 				A0C6496216EBF02F00081AD5 /* THReservation.m in Sources */,
 				A0C6496516EBF75A00081AD5 /* THFlightStatus.m in Sources */,
-				A0C6496916EBFDFE00081AD5 /* THZuluDateFormatter.m in Sources */,
+				58196EAA16EC3A6F00479A90 /* THDashboardViewController.m in Sources */,
+				58196EAE16EC3E0700479A90 /* THZuluDateFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
