@@ -7,11 +7,14 @@
 //
 
 #import "THLoginViewController.h"
-#import "THAccount.h"
+#import "THMemberDataSource.h"
 
 @interface THLoginViewController ()
 
+@property (nonatomic, strong) IBOutlet UITextField *aaNumber;
+@property (nonatomic, strong) IBOutlet UITextField *password;
 
+@property (nonatomic, strong) THMemberDataSource *memberDataSource;
 
 @end
 
@@ -30,6 +33,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
+	self.aaNumber.text = AAADVANTAGE_NUMBER;
+	self.password.text = PASSWORD;
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,11 +52,37 @@
 
 - (IBAction)login:(id)sender
 {
-	THAccount *account = [[THAccount alloc] init];
-	account.aadvantageNumber = self.aaNumber.text;
+	if ([self.spinner isAnimating])
+		return;
 	
-    [self.delegate loginViewControllerDidRequestSignIn:self];
 	[self.spinner startAnimating];
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:THMemberDataSourceDidBecomeReadyNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(memberDataSourceDidBecomeReadyNotification:) name:THMemberDataSourceDidBecomeReadyNotification object:nil];
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:THMemberDataSourceDidFail object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(memberDataSourceDidFailNotification:) name:THMemberDataSourceDidFail object:nil];
+	
+	
+	self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:self.aaNumber.text password:self.password.text];
+}
+
+#pragma mark - THMemberDataSource Notifications
+
+- (void)memberDataSourceDidBecomeReadyNotification:(NSNotification *)note
+{
+	[self.delegate loginViewController:self didRetrieveMember:self.memberDataSource];
+	[self.spinner stopAnimating];
+}
+
+- (void)memberDataSourceDidFailNotification:(NSNotification *)note
+{
+	NSError *error = [note object];
+	
+	NSLog(@"Failed to fetch all member information: %@", error);
+	
+	[self.spinner stopAnimating];
+	[[[UIAlertView alloc] initWithTitle:@"Unable to login at this time. Please try again." message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 @end

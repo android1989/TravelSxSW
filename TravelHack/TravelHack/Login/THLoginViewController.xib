@@ -41,7 +41,7 @@
 					<object class="IBUIImageView" id="335448485">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrameSize">{320, 568}</string>
+						<string key="NSFrame">{{0, -20}, {320, 568}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="475663041"/>
@@ -93,7 +93,7 @@
 						<string key="NSFrame">{{20, 304}, {280, 34}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="925592607"/>
+						<reference key="NSNextKeyView" ref="1058064556"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -205,10 +205,10 @@
 						<reference key="IBUIFontDescription" ref="507411532"/>
 						<reference key="IBUIFont" ref="388368932"/>
 					</object>
-					<object class="IBUIActivityIndicatorView" id="925592607">
+					<object class="IBUIActivityIndicatorView" id="1058064556">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">-2147483379</int>
-						<string key="NSFrame">{{142, 511}, {37, 37}}</string>
+						<string key="NSFrame">{{142, 491}, {37, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -218,7 +218,7 @@
 						<int key="IBUIStyle">0</int>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 568}</string>
+				<string key="NSFrame">{{0, 20}, {320, 548}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="335448485"/>
@@ -227,6 +227,7 @@
 					<bytes key="NSWhite">MQA</bytes>
 					<reference key="NSCustomColorSpace" ref="728834935"/>
 				</object>
+				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics">
 					<string key="IBUISimulatedSizeMetricsClass">IBUIScreenMetrics</string>
 					<object class="NSMutableDictionary" key="IBUINormalizedOrientationToSizeMap">
@@ -261,7 +262,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">spinner</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="925592607"/>
+						<reference key="destination" ref="1058064556"/>
 					</object>
 					<int key="connectionID">42</int>
 				</object>
@@ -335,7 +336,7 @@
 							<reference ref="1030505074"/>
 							<reference ref="475663041"/>
 							<reference ref="908660632"/>
-							<reference ref="925592607"/>
+							<reference ref="1058064556"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -384,7 +385,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">41</int>
-						<reference key="object" ref="925592607"/>
+						<reference key="object" ref="1058064556"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>

@@ -12,12 +12,15 @@
 NSString * const THMemberDataSourceDidBecomeReadyNotification = @"THMemberDataSourceDidBecomeReadyNotification";
 NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 
+NSString * const THMemberDataSourceDidFail = @"THMemberDataSourceDidFail";
 
-@interface THMemberDataSource()
+@interface THMemberDataSource ()
+
 @property (nonatomic, copy) NSString *userName;
 @property (nonatomic, copy) NSString *password;
 @property (nonatomic, strong) THAAClient *client;
 @property (nonatomic, strong) THReservation *reservation;
+
 @end
 
 @implementation THMemberDataSource
@@ -46,6 +49,10 @@ NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 			[self _fetchCurrentFlightInfoIfPossible];
 			[self postUpdateNotificationsIfNeeded];
 		}
+		else
+		{
+			[self postFailureNotificationWithError:error];
+		}
 	}];
 }
 
@@ -56,6 +63,10 @@ NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 		{
 			self.reservation = responseData;
 			[self _fetchCurrentFlightInfoIfPossible];
+		}
+		else
+		{
+			[self postFailureNotificationWithError:error];
 		}
 	}];
 }
@@ -73,15 +84,26 @@ NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 {
 	[self.client fetchFlightStatusWithFlight:flight account:self.account completion:^(id responseData, NSError *error) {
 		
-		NSLog(@"Response Data: %@ Error: %@", responseData, error);
-		_nextFlight = responseData;
-		[self postUpdateNotificationsIfNeeded];
+		if (!error)
+		{
+			_nextFlight = responseData;
+			[self postUpdateNotificationsIfNeeded];
+		}
+		else
+		{
+			[self postFailureNotificationWithError:error];
+		}
 	}];
 }
 
 - (BOOL)isReady
 {
 	return self.account != nil && self.nextFlight != nil;
+}
+
+- (void)postFailureNotificationWithError:(NSError *)error
+{
+	[[NSNotificationCenter defaultCenter] postNotificationName:THMemberDataSourceDidFail object:error];
 }
 
 - (void)postUpdateNotificationsIfNeeded

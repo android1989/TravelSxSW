@@ -8,20 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@class THAccount;
 @class THLoginViewController;
+@class THMemberDataSource;
 
 @protocol THLoginViewControllerDelegate <NSObject>
 
 @required
-- (void)loginViewControllerDidRequestSignIn:(THLoginViewController *)loginViewController;
+- (void)loginViewController:(THLoginViewController *)loginViewController didRetrieveMember:(THMemberDataSource *)member;
 
 @end
 
 @interface THLoginViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UITextField *aaNumber;
-@property (nonatomic, strong) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @property (nonatomic, weak) id <THLoginViewControllerDelegate> delegate;

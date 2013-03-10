@@ -14,6 +14,8 @@
 extern NSString * const THMemberDataSourceDidBecomeReadyNotification;
 extern NSString * const THMemberDataSourceDidUpdate;
 
+extern NSString * const THMemberDataSourceDidFail;
+
 @interface THMemberDataSource : NSObject
 @property (nonatomic, readonly) THAccount *account;
 @property (nonatomic, readonly) THFlight *nextFlight;
