@@ -40,6 +40,9 @@
 
 - (void)viewDidLoad
 {
+	UINib *nib = [UINib nibWithNibName:@"THPastOpportunityCell" bundle:[NSBundle mainBundle]];
+	[self.opportunitiesTableView registerNib:nib forCellReuseIdentifier:@"THPastOpportunityCell"];
+				  
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     for (int i = 0; i < 10; i++)
@@ -78,7 +81,8 @@
     
     if (cell == nil)
     {
-        cell = [[THPastOpportunityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([THPastOpportunityCell class])];
+
+        //cell = [[THPastOpportunityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([THPastOpportunityCell class])];
     }
     
     //set cell properties
