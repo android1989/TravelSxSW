@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "THRadarView.h"
 
 @interface THMapViewController : UIViewController
+@property (weak, nonatomic) IBOutlet THRadarView *radarView;
+@property (nonatomic, copy) NSArray *opportunities;
 
 @end

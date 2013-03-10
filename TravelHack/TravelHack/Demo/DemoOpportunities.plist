@@ -15,6 +15,8 @@
 		<string>THOpportunityCategoryCoffee</string>
 		<key>location</key>
 		<string>DFW</string>
+		<key>distance</key>
+		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -29,6 +31,8 @@
 		<string>THOpportunityCategoryGateCheckin</string>
 		<key>location</key>
 		<string>DFW</string>
+		<key>distance</key>
+		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -43,6 +47,8 @@
 		<string>THOpportunityCategoryStore</string>
 		<key>location</key>
 		<string>C33</string>
+		<key>distance</key>
+		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -57,6 +63,8 @@
 		<string>THOpportunityCategoryBookStore</string>
 		<key>location</key>
 		<string>C24</string>
+		<key>distance</key>
+		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>title</key>
