@@ -160,7 +160,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	THPastOpportunityCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([THPastOpportunityCell class])];
-    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     UIColor *whiteColor = [UIColor colorWithRed:(237.0f/255.0f) green:(237.0f/255.0f) blue:(240.0f/255.0f) alpha:1];
     [cell.opportunityLabel setTextColor:whiteColor];
     [cell.dateLabel setTextColor:whiteColor];
