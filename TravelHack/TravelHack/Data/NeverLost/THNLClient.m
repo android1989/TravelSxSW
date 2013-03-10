@@ -75,7 +75,7 @@ static NSString * const NLApplicationGUID = @"E5677C50-3DC2-45F3-9C83-9A99EB51A0
 		NSNumber *latitude = [dictionary valueForKeyPath:@"Data.Latitude"];
 		NSNumber *longitude = [dictionary valueForKeyPath:@"Data.Longitude"];
 		
-		NSDictionary *parameters = @{@"latitude": [latitude description], @"longitude" : [longitude description], @"alwaysSearch" : @"true", @"CityId" : @"35196", @"mapRadius" : @"1", @"radius" : @"1", @"phrase" : @"shopping, food"};
+		NSDictionary *parameters = @{@"latitude": [latitude description], @"longitude" : [longitude description], @"alwaysSearch" : @"true", @"phrase" : @"airport,"};
 		[self executeRequestWithPath:@"search/pois/" httpMethod:@"GET" parameters:parameters completion:^(id responseData, NSError *error) {
 			NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
 			
