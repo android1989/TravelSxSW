@@ -74,6 +74,7 @@
 	self.splitViewController.timeLabel.text = date;
 	self.splitViewController.statusLabel.text = flight.flightStatus.status;
 	self.splitViewController.terminalLabel.text = [NSString stringWithFormat:@"Gate %@", flight.flightStatus.originInfo.gate];
+	self.splitViewController.nameLabel.text = [NSString stringWithFormat:@"%@ %@", account.firstName, account.lastName];
 	[self.splitViewController.view setNeedsLayout];
 	
 	/*
