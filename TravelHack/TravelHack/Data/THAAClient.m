@@ -114,9 +114,21 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
     [self executeRequestWithPath:@"flightstatus" httpMethod:@"GET" parameters:parameters completion:^(id responseData, NSError *error) {
 
 #warning Parse!
+		THFlight *flight = nil;
+		if (!error && [responseData length])
+		{
+			NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
+			NSArray *flights = [dictionary valueForKeyPath:@"FIS flight status.flights"];
+			if (flights.count)
+			{
+				NSDictionary *flightDictionary = flights[0];
+				flight = [[THFlight alloc] init];
+				[flight configureWithDictionary:flightDictionary];
+			}
+		}
 				
 		if (completion)
-			completion(responseData, error);
+			completion(flight, error);
     }];
 }
 
