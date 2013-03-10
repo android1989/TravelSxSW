@@ -36,6 +36,8 @@
 	
 	self.aaNumber.text = AADVANTAGE_NUMBER;
 	self.password.text = AADVANTAGE_PASSWORD;
+	
+	self.signInButton.titleLabel.font = [UIFont fontWithName:LEAGUE_GOTHIC_R size:26.f];
 }
 
 - (void)didReceiveMemoryWarning

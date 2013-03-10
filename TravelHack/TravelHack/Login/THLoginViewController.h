@@ -20,6 +20,7 @@
 
 @interface THLoginViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @property (nonatomic, weak) id <THLoginViewControllerDelegate> delegate;
