@@ -575,6 +575,8 @@
 				A0C649BD16ECE08500081AD5 /* book_icon@2x.png in Resources */,
 				A0C649BE16ECE08500081AD5 /* globe_icon@2x.png in Resources */,
 				A0C649C016ECFDD700081AD5 /* DemoRedeemables.plist in Resources */,
+				AFE336D816ECEFC900034BA4 /* icon.png in Resources */,
+				AFE336DA16ECF3C000034BA4 /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
