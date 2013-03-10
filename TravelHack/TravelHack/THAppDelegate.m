@@ -10,6 +10,7 @@
 #import "DCIntrospect.h"
 #import "THAAClient.h"
 #import "THMemberDataSource.h"
+#import "THNLClient.h"
 #import "THDashboardViewController.h"
 
 @interface THAppDelegate()

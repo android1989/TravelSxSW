@@ -349,6 +349,8 @@
 		AFE3367C16EB958300034BA4 /* TravelHack */ = {
 			isa = PBXGroup;
 			children = (
+				A0C6497216EC467B00081AD5 /* Demo */,
+				58196EA516EC39D800479A90 /* Screens */,
 				584B5EB816EBF71100E15FAC /* Common */,
 				A0C6495016EBDF8000081AD5 /* Data */,
 				58196EB216EC473400479A90 /* Fonts */,
@@ -433,6 +435,7 @@
 				AFE3368916EB958300034BA4 /* Default.png in Resources */,
 				AFE3368B16EB958300034BA4 /* Default@2x.png in Resources */,
 				AFE3368D16EB958300034BA4 /* Default-568h@2x.png in Resources */,
+				A0C6497716EC46B600081AD5 /* DemoOpportunities.plist in Resources */,
 				58196EB716EC473500479A90 /* LeagueGothic-CondensedItalic.otf in Resources */,
 				58196EB816EC473500479A90 /* LeagueGothic-CondensedRegular.otf in Resources */,
 				58196EB916EC473500479A90 /* LeagueGothic-Italic.otf in Resources */,
@@ -474,6 +477,8 @@
 				A0C6496516EBF75A00081AD5 /* THFlightStatus.m in Sources */,
 				A0C6496D16EC2C7000081AD5 /* THNLClient.m in Sources */,
 				58196EAA16EC3A6F00479A90 /* THDashboardViewController.m in Sources */,
+				A0C6497116EC45F300081AD5 /* THOpportunity.m in Sources */,
+				A0C6497516EC469000081AD5 /* THOpportunityDemoFactory.m in Sources */,
 				58196EAE16EC3E0700479A90 /* THZuluDateFormatter.m in Sources */,
 				58196EB116EC415200479A90 /* THAccountSummaryView.m in Sources */,
 			);
