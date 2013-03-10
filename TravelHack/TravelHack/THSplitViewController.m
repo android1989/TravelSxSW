@@ -7,6 +7,7 @@
 //
 
 #import "THSplitViewController.h"
+#import "THConstants.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface THSplitViewController ()
@@ -37,6 +38,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.pointsLabel setFont:[UIFont fontWithName:LEAGUE_GOTHIC_R size:60]];
+    [self.timeLabel setFont:[UIFont fontWithName:LEAGUE_GOTHIC_R size:30]];
+    [self.statusLabel setFont:[UIFont fontWithName:LEAGUE_GOTHIC_R size:30]];
+    [self.terminalLabel setFont:[UIFont fontWithName:LEAGUE_GOTHIC_R size:30]];
 }
 
 - (void)didReceiveMemoryWarning
