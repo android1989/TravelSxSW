@@ -11,9 +11,15 @@
 #import "THOpportunity.h"
 #import "THOpportunityDemoFactory.h"
 #import "THOpportunityImageFactory.h"
+#import <objc/runtime.h>
+#import "THPastOpportunityCell.h"
+#import <QuartzCore/QuartzCore.h>
+
+static NSString * const THMapViewAssociatedOpportunity = @"THMapViewAssociatedOpportunity";
 
 @interface THMapViewController ()
 @property (nonatomic, strong) CMMotionManager *motionManager;
+@property (nonatomic, strong) THPastOpportunityCell *notificationView;
 @end
 
 @implementation THMapViewController
@@ -31,11 +37,32 @@
 	[self.motionManager stopDeviceMotionUpdates];
 }
 
+- (void)loadNotificationView
+{
+	self.notificationView = [[[UINib nibWithNibName:@"THPastOpportunityCell" bundle:[NSBundle mainBundle]] instantiateWithOwner:nil options:nil] lastObject];
+	self.notificationView.frame = CGRectOffset(self.notificationView.bounds, 0.0, -CGRectGetHeight(self.notificationView.bounds));
+	
+	UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+	imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+	imageView.frame = self.notificationView.bounds;
+	imageView.clipsToBounds = YES;
+	
+	UIView *view = self.notificationView;
+	view.layer.shadowOpacity = 0.7;
+	view.layer.shadowOffset = CGSizeMake(0.0, 3.0);
+	
+	[self.notificationView addSubview:imageView];
+	[self.notificationView sendSubviewToBack:imageView];
+	
+	[self.view addSubview:self.notificationView];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+		
 	self.opportunities = [THOpportunityDemoFactory opportunities];
+	[self loadNotificationView];
 	
 	self.radarView.backgroundImageView.image = [UIImage imageNamed:@"map_background"];
 	
@@ -73,11 +100,43 @@
 		if (radius > 0)
 		{
 			UIButton *dataPoint = [UIButton buttonWithType:UIButtonTypeCustom];
+			
+			objc_setAssociatedObject(dataPoint, &THMapViewAssociatedOpportunity, opportunity, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+			
 			[dataPoint setImage:[self imageForOpportunity:opportunity] forState:UIControlStateNormal];
 			[dataPoint sizeToFit];
 			[self.radarView addDataView:dataPoint atRadius:radius angle:angle];
+			
+			[dataPoint addTarget:self action:@selector(buttonSelected:) forControlEvents:UIControlEventTouchUpInside];
 		}
 	}
+}
+
+- (void)buttonSelected:(UIButton *)button
+{
+	THOpportunity *opportunity = objc_getAssociatedObject(button, &THMapViewAssociatedOpportunity);
+	[self displayOpportunity:opportunity];
+}
+
+- (void)displayOpportunity:(THOpportunity *)opportunity
+{
+	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(dismissOpportunity) object:nil];
+	
+	[self.view bringSubviewToFront:self.notificationView];
+	[self.notificationView setOpportunity:opportunity];
+	
+	[UIView animateWithDuration:0.5 animations:^{
+		self.notificationView.frame = self.notificationView.bounds;
+	} completion:^(BOOL finished) {
+		[self performSelector:@selector(dismissOpportunity) withObject:nil afterDelay:3.0];
+	}];
+}
+
+- (void)dismissOpportunity
+{
+	[UIView animateWithDuration:0.5 animations:^{
+		self.notificationView.frame = CGRectOffset(self.notificationView.bounds, 0.0, -CGRectGetHeight(self.notificationView.bounds));
+	}];
 }
 
 - (CGFloat)radiusForOpportunityDistance:(NSInteger)distance
