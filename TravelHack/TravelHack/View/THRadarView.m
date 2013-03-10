@@ -68,7 +68,7 @@ void THRadarViewCommonInit(THRadarView *view)
 	CGFloat x = cosf(angleInRadians) * radius;
 	CGFloat y = sinf(angleInRadians) * radius;
 	
-	view.center = CGPointMake(x, y);
+	view.center = CGPointMake(CGRectGetMidX(self.backgroundImageView.bounds) + x, CGRectGetMidY(self.backgroundImageView.bounds) + y);
 }
 
 @end

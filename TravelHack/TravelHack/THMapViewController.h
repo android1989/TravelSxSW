@@ -11,5 +11,6 @@
 
 @interface THMapViewController : UIViewController
 @property (weak, nonatomic) IBOutlet THRadarView *radarView;
+@property (nonatomic, copy) NSArray *opportunities;
 
 @end

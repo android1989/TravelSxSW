@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *location;
 
 @property (nonatomic, strong) NSString *category;
+@property (nonatomic, strong) NSNumber *distance; // 1 = short, 2 = medium, 3 = long
 
 @end
 
