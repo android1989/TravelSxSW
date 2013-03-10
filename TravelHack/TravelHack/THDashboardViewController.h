@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "THMemberDataSource.h"
 
 @interface THDashboardViewController : UIViewController
+@property (nonatomic, strong) THMemberDataSource *dataSource;
 
 @end
