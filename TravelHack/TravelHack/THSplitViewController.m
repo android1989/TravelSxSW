@@ -12,6 +12,9 @@
 
 @interface THSplitViewController ()
 @property (nonatomic, strong) IBOutlet UIImageView *splitImage;
+@property (nonatomic, strong) NSTimer *addUpTimer;
+@property (nonatomic, assign) NSInteger basePoints;
+@property (nonatomic, assign) NSInteger additions;
 @end
 
 @implementation THSplitViewController
@@ -72,4 +75,37 @@
 	self.statusLabel.frame = frame;
 }
 
+- (void)incrementMiles:(NSInteger)addition basePoints:(NSInteger)basePoints
+{
+    self.basePoints = basePoints;
+    self.additions = addition;
+    self.addUpTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(addUpTimer:) userInfo:nil repeats:YES];
+}
+
+- (void)decrementMiles:(NSInteger)subtraction basePoints:(NSInteger)basePoints
+{
+    while (subtraction > 0)
+    {
+        basePoints -= 1;
+        subtraction += 1;
+        if (basePoints <= 0)
+        {
+            basePoints = 0;
+            subtraction = 0;
+        }
+        [self.pointsLabel setText:[NSString stringWithFormat:@"%d",basePoints]];
+    }
+}
+
+- (void)addUpTimer:(NSTimer*)timer
+{
+    self.basePoints += 5;
+    self.additions -= 5;
+    [self.pointsLabel setText:[NSString stringWithFormat:@"%d",self.basePoints]];
+    
+    if (self.additions <= 0)
+    {
+        [self.addUpTimer invalidate];
+    }
+}
 @end
