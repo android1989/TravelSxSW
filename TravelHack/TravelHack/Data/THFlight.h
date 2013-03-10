@@ -21,4 +21,6 @@
 
 - (void)configureWithDictionary:(NSDictionary *)dictionary;
 
+- (NSString *)flightDescription;
+
 @end

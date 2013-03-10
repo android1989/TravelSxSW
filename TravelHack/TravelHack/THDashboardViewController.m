@@ -88,8 +88,10 @@
 	self.splitViewController.pointsLabel.text = [NSNumberFormatter localizedStringFromNumber:account.accountBalance.awardMileage numberStyle:NSNumberFormatterDecimalStyle];
 	self.splitViewController.timeLabel.text = date;
 	self.splitViewController.statusLabel.text = flight.flightStatus.status;
-	self.splitViewController.terminalLabel.text = [NSString stringWithFormat:@"Gate %@", flight.flightStatus.originInfo.gate];
 	self.splitViewController.nameLabel.text = [NSString stringWithFormat:@"%@ %@", account.firstName, account.lastName];
+	self.splitViewController.terminalLabel.text = flight.flightStatus.originInfo.terminalDescription;
+	self.flightDescription.text = [flight flightDescription];
+	
 	[self.splitViewController.view setNeedsLayout];
 	
 	/*
@@ -269,4 +271,6 @@
     op.distance = 0;
     return op;
 }
+
+#pragma mark - 
 @end

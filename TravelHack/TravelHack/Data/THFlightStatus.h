@@ -31,4 +31,6 @@
 
 - (void)configureWithDictionary:(NSDictionary *)dictionary;
 
+- (NSString *)terminalDescription;
+
 @end
