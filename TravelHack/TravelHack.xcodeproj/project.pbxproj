@@ -43,6 +43,8 @@
 		A0C6497116EC45F300081AD5 /* THOpportunity.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6497016EC45F300081AD5 /* THOpportunity.m */; };
 		A0C6497516EC469000081AD5 /* THOpportunityDemoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6497416EC469000081AD5 /* THOpportunityDemoFactory.m */; };
 		A0C6497716EC46B600081AD5 /* DemoOpportunities.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0C6497616EC46B600081AD5 /* DemoOpportunities.plist */; };
+		A0C649B316ECA26700081AD5 /* THRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C649B216ECA26700081AD5 /* THRadarView.m */; };
+		A0C649B516ECA3FF00081AD5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C649B416ECA3FF00081AD5 /* CoreMotion.framework */; };
 		AFE3367716EB958300034BA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367616EB958300034BA4 /* UIKit.framework */; };
 		AFE3367916EB958300034BA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367816EB958300034BA4 /* Foundation.framework */; };
 		AFE3367B16EB958300034BA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367A16EB958300034BA4 /* CoreGraphics.framework */; };
@@ -62,10 +64,10 @@
 		AFE336B416EC67C500034BA4 /* THDashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE336B316EC67C500034BA4 /* THDashboardViewController.xib */; };
 		AFE336B816EC7AAD00034BA4 /* THPastOpportunityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE336B716EC7AAD00034BA4 /* THPastOpportunityCell.m */; };
 		AFE336BA16EC7AC100034BA4 /* THPastOpportunityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE336B916EC7AC100034BA4 /* THPastOpportunityCell.xib */; };
-		AFE336BC16EC7C1400034BA4 /* coffee_table_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336BB16EC7C1400034BA4 /* coffee_table_cell.png */; };
+		AFE336BC16EC7C1400034BA4 /* coffee_table_cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336BB16EC7C1400034BA4 /* coffee_table_cell@2x.png */; };
 		AFE336BE16EC85BB00034BA4 /* tableViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336BD16EC85BB00034BA4 /* tableViewBackground.png */; };
 		AFE336C016EC872700034BA4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336BF16EC872700034BA4 /* background.png */; };
-		AFE336C216EC87A300034BA4 /* map_background.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C116EC87A300034BA4 /* map_background.png */; };
+		AFE336C216EC87A300034BA4 /* map_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C116EC87A300034BA4 /* map_background@2x.png */; };
 		AFE336C416EC8D1400034BA4 /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C316EC8D1400034BA4 /* shadow.png */; };
 		AFE336C616EC8D6C00034BA4 /* shadow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C516EC8D6C00034BA4 /* shadow_up.png */; };
 		AFE336C816EC8E7900034BA4 /* split_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336C716EC8E7900034BA4 /* split_bar.png */; };
@@ -74,7 +76,6 @@
 		AFE336CE16EC920B00034BA4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336CD16EC920B00034BA4 /* Default-568h@2x.png */; };
 		AFE336D316EC924D00034BA4 /* THLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE336D116EC924D00034BA4 /* THLoginViewController.m */; };
 		AFE336D416EC924D00034BA4 /* THLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE336D216EC924D00034BA4 /* THLoginViewController.xib */; };
-		AFE336D616EC927300034BA4 /* login_button.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE336D516EC927300034BA4 /* login_button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,9 @@
 		A0C6497616EC46B600081AD5 /* DemoOpportunities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DemoOpportunities.plist; path = Demo/DemoOpportunities.plist; sourceTree = "<group>"; };
 		A0C6497816EC4BEF00081AD5 /* THZuluDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THZuluDateFormatter.h; path = Data/THZuluDateFormatter.h; sourceTree = "<group>"; };
 		A0C6497916EC4BEF00081AD5 /* THZuluDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THZuluDateFormatter.m; path = Data/THZuluDateFormatter.m; sourceTree = "<group>"; };
+		A0C649B116ECA26600081AD5 /* THRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THRadarView.h; path = View/THRadarView.h; sourceTree = "<group>"; };
+		A0C649B216ECA26700081AD5 /* THRadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THRadarView.m; path = View/THRadarView.m; sourceTree = "<group>"; };
+		A0C649B416ECA3FF00081AD5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		AFE3367316EB958300034BA4 /* TravelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE3367616EB958300034BA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFE3367816EB958300034BA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -171,10 +175,10 @@
 		AFE336B616EC7AAD00034BA4 /* THPastOpportunityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THPastOpportunityCell.h; sourceTree = "<group>"; };
 		AFE336B716EC7AAD00034BA4 /* THPastOpportunityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THPastOpportunityCell.m; sourceTree = "<group>"; };
 		AFE336B916EC7AC100034BA4 /* THPastOpportunityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THPastOpportunityCell.xib; sourceTree = "<group>"; };
-		AFE336BB16EC7C1400034BA4 /* coffee_table_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee_table_cell.png; sourceTree = "<group>"; };
+		AFE336BB16EC7C1400034BA4 /* coffee_table_cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coffee_table_cell@2x.png"; sourceTree = "<group>"; };
 		AFE336BD16EC85BB00034BA4 /* tableViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewBackground.png; sourceTree = "<group>"; };
 		AFE336BF16EC872700034BA4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		AFE336C116EC87A300034BA4 /* map_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_background.png; sourceTree = "<group>"; };
+		AFE336C116EC87A300034BA4 /* map_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_background@2x.png"; sourceTree = "<group>"; };
 		AFE336C316EC8D1400034BA4 /* shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow.png; sourceTree = "<group>"; };
 		AFE336C516EC8D6C00034BA4 /* shadow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow_up.png; sourceTree = "<group>"; };
 		AFE336C716EC8E7900034BA4 /* split_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = split_bar.png; sourceTree = "<group>"; };
@@ -184,7 +188,6 @@
 		AFE336D016EC924D00034BA4 /* THLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLoginViewController.h; sourceTree = "<group>"; };
 		AFE336D116EC924D00034BA4 /* THLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLoginViewController.m; sourceTree = "<group>"; };
 		AFE336D216EC924D00034BA4 /* THLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THLoginViewController.xib; sourceTree = "<group>"; };
-		AFE336D516EC927300034BA4 /* login_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_button.png; path = ../../../../Desktop/login_button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C649B516ECA3FF00081AD5 /* CoreMotion.framework in Frameworks */,
 				A0C6494F16EBD69700081AD5 /* SystemConfiguration.framework in Frameworks */,
 				589875A916EB9F1F008A24A1 /* QuartzCore.framework in Frameworks */,
 				AFE3367716EB958300034BA4 /* UIKit.framework in Frameworks */,
@@ -247,16 +251,15 @@
 		58196EBB16EC544C00479A90 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AFE336D516EC927300034BA4 /* login_button.png */,
 				AFE336CB16EC91FA00034BA4 /* splash_screen.png */,
 				AFE336C916EC91F100034BA4 /* login_button.png */,
 				AFE336C716EC8E7900034BA4 /* split_bar.png */,
 				AFE336C516EC8D6C00034BA4 /* shadow_up.png */,
 				AFE336C316EC8D1400034BA4 /* shadow.png */,
-				AFE336C116EC87A300034BA4 /* map_background.png */,
+				AFE336C116EC87A300034BA4 /* map_background@2x.png */,
 				AFE336BF16EC872700034BA4 /* background.png */,
 				AFE336BD16EC85BB00034BA4 /* tableViewBackground.png */,
-				AFE336BB16EC7C1400034BA4 /* coffee_table_cell.png */,
+				AFE336BB16EC7C1400034BA4 /* coffee_table_cell@2x.png */,
 				AFE336B116EC65E200034BA4 /* profile_bottom@2x.png */,
 				58196EBE16EC5A8000479A90 /* badge@2x.png */,
 				58196EBC16EC544C00479A90 /* profile_top@2x.png */,
@@ -386,9 +389,19 @@
 			name = Demo;
 			sourceTree = "<group>";
 		};
+		A0C649B016ECA25300081AD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0C649B116ECA26600081AD5 /* THRadarView.h */,
+				A0C649B216ECA26700081AD5 /* THRadarView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		AFE3366A16EB958300034BA4 = {
 			isa = PBXGroup;
 			children = (
+				A0C649B416ECA3FF00081AD5 /* CoreMotion.framework */,
 				AFE336CD16EC920B00034BA4 /* Default-568h@2x.png */,
 				589875A716EB9EAD008A24A1 /* Submodules */,
 				AFE3367C16EB958300034BA4 /* TravelHack */,
@@ -420,6 +433,7 @@
 		AFE3367C16EB958300034BA4 /* TravelHack */ = {
 			isa = PBXGroup;
 			children = (
+				A0C649B016ECA25300081AD5 /* View */,
 				AFE336B516EC7A8D00034BA4 /* Cells */,
 				A0C6497216EC467B00081AD5 /* Demo */,
 				58196EA516EC39D800479A90 /* Screens */,
@@ -540,10 +554,10 @@
 				AFE336B216EC65E200034BA4 /* profile_bottom@2x.png in Resources */,
 				AFE336B416EC67C500034BA4 /* THDashboardViewController.xib in Resources */,
 				AFE336BA16EC7AC100034BA4 /* THPastOpportunityCell.xib in Resources */,
-				AFE336BC16EC7C1400034BA4 /* coffee_table_cell.png in Resources */,
+				AFE336BC16EC7C1400034BA4 /* coffee_table_cell@2x.png in Resources */,
 				AFE336BE16EC85BB00034BA4 /* tableViewBackground.png in Resources */,
 				AFE336C016EC872700034BA4 /* background.png in Resources */,
-				AFE336C216EC87A300034BA4 /* map_background.png in Resources */,
+				AFE336C216EC87A300034BA4 /* map_background@2x.png in Resources */,
 				AFE336C416EC8D1400034BA4 /* shadow.png in Resources */,
 				AFE336C616EC8D6C00034BA4 /* shadow_up.png in Resources */,
 				AFE336C816EC8E7900034BA4 /* split_bar.png in Resources */,
@@ -551,7 +565,6 @@
 				AFE336CC16EC91FA00034BA4 /* splash_screen.png in Resources */,
 				AFE336CE16EC920B00034BA4 /* Default-568h@2x.png in Resources */,
 				AFE336D416EC924D00034BA4 /* THLoginViewController.xib in Resources */,
-				AFE336D616EC927300034BA4 /* login_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +609,7 @@
 				AFE336AF16EC64D100034BA4 /* THPastOpportunitiesViewController.m in Sources */,
 				AFE336B816EC7AAD00034BA4 /* THPastOpportunityCell.m in Sources */,
 				AFE336D316EC924D00034BA4 /* THLoginViewController.m in Sources */,
+				A0C649B316ECA26700081AD5 /* THRadarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
