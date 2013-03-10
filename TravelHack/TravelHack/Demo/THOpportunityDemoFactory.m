@@ -14,6 +14,11 @@
 + (NSArray *)opportunities
 {
 	NSURL *URL = [[NSBundle mainBundle] URLForResource:@"DemoOpportunities" withExtension:@"plist"];
+	return [self opportunitiesWithURL:URL];
+}
+
++ (NSArray *)opportunitiesWithURL:(NSURL *)URL
+{
 	NSArray *array = [NSArray arrayWithContentsOfURL:URL];
 	
 	NSMutableArray *opportunities = [NSMutableArray array];
@@ -25,11 +30,13 @@
 	}
 	
 	return opportunities;
+
 }
 
 + (NSArray *)reedemableOpportunities
 {
-	return [self opportunities];
+	NSURL *URL = [[NSBundle mainBundle] URLForResource:@"DemoRedeemables" withExtension:@"plist"];
+	return [self opportunitiesWithURL:URL];
 }
 
 @end

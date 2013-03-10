@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Tall Latte</string>
+		<key>pointValue</key>
+		<integer>-300</integer>
+		<key>date</key>
+		<string>Starbucks</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryCoffee</string>
+		<key>location</key>
+		<string>C24</string>
+		<key>distance</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Day Trip to Loung</string>
+		<key>pointValue</key>
+		<integer>-1150</integer>
+		<key>date</key>
+		<string>AA Admirals Club</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryAirlineLounge</string>
+		<key>location</key>
+		<string>C24</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>1 Well Drink</string>
+		<key>pointValue</key>
+		<integer>-800</integer>
+		<key>date</key>
+		<string>Chili&apos;s Bar and Grill</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryBar</string>
+		<key>location</key>
+		<string>C12</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Today&apos;s Newspaper</string>
+		<key>pointValue</key>
+		<integer>-150</integer>
+		<key>date</key>
+		<string>Herald Times</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryBookStore</string>
+		<key>location</key>
+		<string>C17</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>2 Soft Tacos</string>
+		<key>pointValue</key>
+		<integer>-250</integer>
+		<key>date</key>
+		<string>Taco Bell Express</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryFood</string>
+		<key>location</key>
+		<string>C9</string>
+	</dict>
+</array>
+</plist>

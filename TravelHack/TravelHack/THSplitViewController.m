@@ -68,6 +68,8 @@
 	self.tableView.rowHeight = [THPastOpportunityCell preferredHeight];
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
+	
+	[self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"Identifier"];
 		
 	[self.tableView reloadData];
 }
@@ -127,5 +129,14 @@
 	return cell;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{	
+	UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"Identifier"];
+	view.textLabel.text = @"SHOP With Miles";
+	view.textLabel.textAlignment = NSTextAlignmentCenter;
+	view.textLabel.textColor = [UIColor colorWithRed:237.0 / 255.0 green:237.0 /255.0  blue:240.0 / 255.0 alpha:1.0];
+	view.tintColor = [UIColor colorWithRed:76.0 / 255.0 green:86.0 / 255.0 blue:114.0 / 255.0 alpha:1.0];
+	return view;
+}
 
 @end
