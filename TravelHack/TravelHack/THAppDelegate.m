@@ -52,11 +52,7 @@
 	
 	self.window.rootViewController = self.loginViewController;
 	[self.window makeKeyAndVisible];
-	
-	[[THNLClient sharedClient] executePOISearchForAirportCode:@"DFW" completion:^(id responseData, NSError *error) {
-		NSLog(@"%@", responseData);
-	}];
-	
+		
 #if TARGET_IPHONE_SIMULATOR
 	[[DCIntrospect sharedIntrospector] start];
 #endif
