@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSMutableArray *opportunities;
 @property (nonatomic, strong) IBOutlet UITableView *opportunitiesTableView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation THPastOpportunitiesViewController
@@ -85,4 +86,15 @@
     return cell;
 }
 
+
+#pragma mark - 
+
+- (void)viewWillLayoutSubviews
+{
+	[super viewWillLayoutSubviews];
+	
+	CGRect frame = self.opportunitiesTableView.frame;
+	self.opportunitiesTableView.frame = CGRectMake(0.0, CGRectGetHeight(self.view.bounds) - CGRectGetHeight(frame), CGRectGetWidth(frame), CGRectGetHeight(frame));
+	self.imageView.frame = frame;
+}
 @end
