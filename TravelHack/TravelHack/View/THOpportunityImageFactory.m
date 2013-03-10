@@ -17,7 +17,12 @@ static NSString *_defaultImageName;
 {
 	NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
 	[dictionary setObject:@"coffee_table_cell" forKey:THOpportunityCategoryCoffee];
-	_defaultImageName = @"coffee_table_cell";
+	[dictionary setObject:@"book_icon" forKey:THOpportunityCategoryBookStore];
+	[dictionary setObject:@"baggage_icon" forKey:THOpportunityCategoryBagCheck];
+	[dictionary setObject:@"baggage_icon" forKey:THOpportunityCategoryGateCheckin];
+	[dictionary setObject:@"baggage_icon" forKey:THOpportunityCategoryFlightCheckin];
+	
+	_defaultImageName = @"globe_icon";
 	
 	_imageMap = dictionary;
 }
