@@ -55,4 +55,15 @@
     [self.splitImage setAlpha:1];
 }
 
+- (void)viewWillLayoutSubviews
+{
+	[super viewWillLayoutSubviews];
+	
+	CGFloat maxX = CGRectGetMaxX(self.statusLabel.frame);
+	[self.statusLabel sizeToFit];
+	CGRect frame = self.statusLabel.frame;
+	frame.origin.x = maxX - CGRectGetWidth(frame);
+	self.statusLabel.frame = frame;
+}
+
 @end
