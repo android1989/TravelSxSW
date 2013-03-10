@@ -59,6 +59,7 @@
 	self.opportunityLabel.text = op.title;
 	self.opportunityIcon.image = [THOpportunityImageFactory imageForOpportunity:op];
 	self.pointLabel.text = [NSString stringWithFormat:@"%@", op.pointValue];
+	self.pointLabel.font = [UIFont fontWithName:LEAGUE_GOTHIC_R size:40.f];
 	self.dateLabel.text = [NSString stringWithFormat:@"%@ at %@", op.date, op.location];
 
 }
