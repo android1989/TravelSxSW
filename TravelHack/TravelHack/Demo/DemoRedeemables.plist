@@ -20,7 +20,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Day Trip to Lounge</string>
+		<string>Day Pass to Lounge</string>
 		<key>pointValue</key>
 		<integer>2000</integer>
 		<key>date</key>
@@ -62,15 +62,29 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>2 Soft Tacos</string>
+		<string>Five Star Service</string>
 		<key>pointValue</key>
-		<integer>350</integer>
+		<integer>10000</integer>
 		<key>date</key>
-		<string>Taco Bell Express</string>
+		<string>American Airlines</string>
 		<key>callToAction</key>
 		<string></string>
 		<key>category</key>
-		<string>THOpportunityCategoryFood</string>
+		<string>THOpportunityCategoryAirlineLounge</string>
+		<key>location</key>
+		<string>C9</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Main Cabin Upgrade</string>
+		<key>pointValue</key>
+		<integer>7000</integer>
+		<key>date</key>
+		<string>American Airlines</string>
+		<key>callToAction</key>
+		<string></string>
+		<key>category</key>
+		<string>THOpportunityCategoryAirlineLounge</string>
 		<key>location</key>
 		<string>C9</string>
 	</dict>

@@ -266,7 +266,7 @@
         default:
             break;
     }
-    op.pointValue  = [NSNumber numberWithInt:(rand()%3)*100];
+    op.pointValue  = [NSNumber numberWithInt:((rand()%3)*100)+50];
     op.date = @"03/10/13";
     op.location = @"AUS";
     op.distance = 0;
