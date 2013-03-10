@@ -22,7 +22,7 @@
 		<key>title</key>
 		<string>Gate Check-In</string>
 		<key>pointValue</key>
-		<integer>200</integer>
+		<integer>50</integer>
 		<key>date</key>
 		<string>03/29/13</string>
 		<key>callToAction</key>
@@ -38,7 +38,7 @@
 		<key>title</key>
 		<string>Lone Star Attitude</string>
 		<key>pointValue</key>
-		<integer>150</integer>
+		<integer>75</integer>
 		<key>date</key>
 		<string>03/29/13</string>
 		<key>callToAction</key>
@@ -54,7 +54,7 @@
 		<key>title</key>
 		<string>Hudson Booksellers</string>
 		<key>pointValue</key>
-		<integer>250</integer>
+		<integer>50</integer>
 		<key>date</key>
 		<string>03/29/13</string>
 		<key>callToAction</key>
@@ -70,7 +70,7 @@
 		<key>title</key>
 		<string>Fox News Channel</string>
 		<key>pointValue</key>
-		<integer>100</integer>
+		<integer>125</integer>
 		<key>date</key>
 		<string>03/29/13</string>
 		<key>callToAction</key>
@@ -84,7 +84,7 @@
 		<key>title</key>
 		<string>Best Buy Express</string>
 		<key>pointValue</key>
-		<integer>25</integer>
+		<integer>100</integer>
 		<key>date</key>
 		<string>03/29/13</string>
 		<key>callToAction</key>
@@ -98,7 +98,7 @@
 		<key>title</key>
 		<string>Texas Stadium Skybox Bar &amp; Grill</string>
 		<key>pointValue</key>
-		<integer>500</integer>
+		<integer>50</integer>
 		<key>date</key>
 		<string>03/29/13</string>
 		<key>callToAction</key>
@@ -112,7 +112,7 @@
 		<key>title</key>
 		<string>Taco Bell Express</string>
 		<key>pointValue</key>
-		<integer>100</integer>
+		<integer>25</integer>
 		<key>date</key>
 		<string>03/29/13</string>
 		<key>callToAction</key>
@@ -126,7 +126,7 @@
 		<key>title</key>
 		<string>American Airlines Admirals Club</string>
 		<key>pointValue</key>
-		<integer>750</integer>
+		<integer>150</integer>
 		<key>date</key>
 		<string>03/29/13</string>
 		<key>callToAction</key>
