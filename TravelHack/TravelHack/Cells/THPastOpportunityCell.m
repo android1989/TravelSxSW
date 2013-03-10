@@ -21,6 +21,31 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	self = [super initWithCoder:aDecoder];
+	if (self)
+	{
+		NSLog(@"%@", self.pointLabel);
+	}
+	return self;
+}
+
+- (void)layoutSubviews
+{
+	[super layoutSubviews];
+	
+	CGFloat width = CGRectGetWidth(self.opportunityLabel.frame);
+	self.opportunityLabel.numberOfLines = 2;
+	[self.opportunityLabel sizeToFit];
+	CGRect frame = self.opportunityLabel.frame;
+	frame.size.width = width;
+	
+	self.opportunityLabel.frame = frame;
+	
+	self.dateLabel.frame = CGRectOffset(self.dateLabel.bounds, CGRectGetMinX(self.dateLabel.frame), CGRectGetMaxY(frame));
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];

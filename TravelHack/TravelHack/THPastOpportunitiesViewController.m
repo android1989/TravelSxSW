@@ -8,6 +8,9 @@
 
 #import "THPastOpportunitiesViewController.h"
 #import "THPastOpportunityCell.h"
+#import "THOpportunityDemoFactory.h"
+#import "THOpportunity.h"
+#import "THOpportunityImageFactory.h"
 
 @interface THPastOpportunitiesViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -42,13 +45,8 @@
 {
 	UINib *nib = [UINib nibWithNibName:@"THPastOpportunityCell" bundle:[NSBundle mainBundle]];
 	[self.opportunitiesTableView registerNib:nib forCellReuseIdentifier:@"THPastOpportunityCell"];
-				  
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    for (int i = 0; i < 10; i++)
-    {
-        [self.opportunities addObject:@"wooo"];
-    }
+	
+	[self.opportunities addObjectsFromArray:[THOpportunityDemoFactory opportunities]];
     
     [self.opportunitiesTableView reloadData];
 }
@@ -79,13 +77,12 @@
         
     THPastOpportunityCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([THPastOpportunityCell class])];
     
-    if (cell == nil)
-    {
-
-        //cell = [[THPastOpportunityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([THPastOpportunityCell class])];
-    }
-    
     //set cell properties
+	THOpportunity *op = self.opportunities[indexPath.row];
+	cell.opportunityLabel.text = op.title;
+	cell.opportunityIcon.image = [THOpportunityImageFactory imageForOpportunity:op];
+	cell.pointLabel.text = [NSString stringWithFormat:@"%@", op.pointValue];
+	cell.dateLabel.text = [NSString stringWithFormat:@"%@ at %@", op.date, op.location];
     
     return cell;
 }
