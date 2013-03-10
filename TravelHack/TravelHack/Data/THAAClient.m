@@ -145,11 +145,14 @@ static NSString * const AAAPIKey = @"l7xxd09d84947ffb4482a8e87cd76926065c";
 		if (completion)
 			completion(responseObject, nil);
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		NSLog(@"Error loading operation: %@", error);
 		if (completion)
 			completion(nil, error);
 	}];
 	
-	[self.httpClient enqueueHTTPRequestOperation:operation];
+	// Try to prevent server timeouts since we can only hit twice per second
+	[self.httpClient performSelector:@selector(enqueueHTTPRequestOperation:) withObject:operation afterDelay:1.0];
+//	[self.httpClient enqueueHTTPRequestOperation:operation];
 }
 
 @end

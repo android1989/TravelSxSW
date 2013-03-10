@@ -72,11 +72,7 @@
 
 	self.loginViewController.aaNumber.text = AAADVANTAGE_NUMBER;
 	self.loginViewController.password.text = PASSWORD;
-	
-	[[THNLClient sharedClient] executePOISearchForAirportCode:@"DFW" completion:^(id responseData, NSError *error) {
-		NSLog(@"%@", responseData);
-	}];
-	
+		
 #if TARGET_IPHONE_SIMULATOR
 	[[DCIntrospect sharedIntrospector] start];
 #endif
