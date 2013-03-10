@@ -59,10 +59,11 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    
     CGPoint finalPoint = CGPointMake(self.splitViewController.view.center.x,
                                      CGRectGetHeight(self.view.bounds) - CGRectGetHeight(self.splitViewController.view.bounds)/2.0f);
     
-    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:1 delay:.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.splitViewController.view.center = finalPoint;
         [self.mapView setFrame:CGRectMake(CGRectGetMinX(self.mapView.frame), 0, CGRectGetWidth(self.mapView.frame), CGRectGetMinY(self.splitViewController.view.frame))];
         

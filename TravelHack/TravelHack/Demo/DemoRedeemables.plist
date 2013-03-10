@@ -6,7 +6,7 @@
 		<key>title</key>
 		<string>Tall Latte</string>
 		<key>pointValue</key>
-		<integer>-300</integer>
+		<integer>500</integer>
 		<key>date</key>
 		<string>Starbucks</string>
 		<key>callToAction</key>
@@ -22,7 +22,7 @@
 		<key>title</key>
 		<string>Day Trip to Loung</string>
 		<key>pointValue</key>
-		<integer>-1150</integer>
+		<integer>2000</integer>
 		<key>date</key>
 		<string>AA Admirals Club</string>
 		<key>callToAction</key>
@@ -36,7 +36,7 @@
 		<key>title</key>
 		<string>1 Well Drink</string>
 		<key>pointValue</key>
-		<integer>-800</integer>
+		<integer>800</integer>
 		<key>date</key>
 		<string>Chili&apos;s Bar and Grill</string>
 		<key>callToAction</key>
@@ -50,7 +50,7 @@
 		<key>title</key>
 		<string>Today&apos;s Newspaper</string>
 		<key>pointValue</key>
-		<integer>-150</integer>
+		<integer>180</integer>
 		<key>date</key>
 		<string>Herald Times</string>
 		<key>callToAction</key>
@@ -64,7 +64,7 @@
 		<key>title</key>
 		<string>2 Soft Tacos</string>
 		<key>pointValue</key>
-		<integer>-250</integer>
+		<integer>350</integer>
 		<key>date</key>
 		<string>Taco Bell Express</string>
 		<key>callToAction</key>
