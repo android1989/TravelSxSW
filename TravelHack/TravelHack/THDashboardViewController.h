@@ -11,5 +11,6 @@
 
 @interface THDashboardViewController : UIViewController
 @property (nonatomic, strong) THMemberDataSource *dataSource;
+@property (weak, nonatomic) IBOutlet UILabel *flightDescription;
 
 @end

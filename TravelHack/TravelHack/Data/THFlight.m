@@ -33,4 +33,9 @@ static THZuluDateFormatter *_formatter;
 	[self.flightStatus configureWithDictionary:[dictionary objectForKey:@"flightStatus"]];
 }
 
+- (NSString *)flightDescription
+{
+	return [NSString stringWithFormat:@"%@ to %@", self.originAirportCode, self.destinationAirportCode];
+}
+
 @end
