@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		58196EAA16EC3A6F00479A90 /* THDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58196EA816EC3A6F00479A90 /* THDashboardViewController.m */; };
-		58196EAE16EC3E0700479A90 /* THZuluDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 58196EAD16EC3E0700479A90 /* THZuluDateFormatter.m */; };
 		58196EB116EC415200479A90 /* THAccountSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58196EB016EC415200479A90 /* THAccountSummaryView.m */; };
 		58196EB716EC473500479A90 /* LeagueGothic-CondensedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 58196EB316EC473500479A90 /* LeagueGothic-CondensedItalic.otf */; };
 		58196EB816EC473500479A90 /* LeagueGothic-CondensedRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 58196EB416EC473500479A90 /* LeagueGothic-CondensedRegular.otf */; };
@@ -16,6 +15,7 @@
 		58196EBA16EC473500479A90 /* LeagueGothic-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 58196EB616EC473500479A90 /* LeagueGothic-Regular.otf */; };
 		58196EBD16EC544C00479A90 /* profile_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58196EBC16EC544C00479A90 /* profile_top@2x.png */; };
 		58196EBF16EC5A8000479A90 /* badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58196EBE16EC5A8000479A90 /* badge@2x.png */; };
+		58196EC016EC5D7700479A90 /* THZuluDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6497916EC4BEF00081AD5 /* THZuluDateFormatter.m */; };
 		5898759016EB9D54008A24A1 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898757E16EB9D54008A24A1 /* AFHTTPClient.m */; };
 		5898759116EB9D54008A24A1 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898758016EB9D54008A24A1 /* AFHTTPRequestOperation.m */; };
 		5898759216EB9D54008A24A1 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5898758216EB9D54008A24A1 /* AFImageRequestOperation.m */; };
@@ -43,7 +43,6 @@
 		A0C6497116EC45F300081AD5 /* THOpportunity.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6497016EC45F300081AD5 /* THOpportunity.m */; };
 		A0C6497516EC469000081AD5 /* THOpportunityDemoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6497416EC469000081AD5 /* THOpportunityDemoFactory.m */; };
 		A0C6497716EC46B600081AD5 /* DemoOpportunities.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0C6497616EC46B600081AD5 /* DemoOpportunities.plist */; };
-		A0C6497A16EC4BEF00081AD5 /* THZuluDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6497916EC4BEF00081AD5 /* THZuluDateFormatter.m */; };
 		AFE3367716EB958300034BA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367616EB958300034BA4 /* UIKit.framework */; };
 		AFE3367916EB958300034BA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367816EB958300034BA4 /* Foundation.framework */; };
 		AFE3367B16EB958300034BA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367A16EB958300034BA4 /* CoreGraphics.framework */; };
@@ -58,8 +57,6 @@
 /* Begin PBXFileReference section */
 		58196EA716EC3A6F00479A90 /* THDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDashboardViewController.h; sourceTree = "<group>"; };
 		58196EA816EC3A6F00479A90 /* THDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDashboardViewController.m; sourceTree = "<group>"; };
-		58196EAC16EC3E0700479A90 /* THZuluDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THZuluDateFormatter.h; path = Data/THZuluDateFormatter.h; sourceTree = "<group>"; };
-		58196EAD16EC3E0700479A90 /* THZuluDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THZuluDateFormatter.m; path = Data/THZuluDateFormatter.m; sourceTree = "<group>"; };
 		58196EAF16EC415200479A90 /* THAccountSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THAccountSummaryView.h; sourceTree = "<group>"; };
 		58196EB016EC415200479A90 /* THAccountSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THAccountSummaryView.m; sourceTree = "<group>"; };
 		58196EB316EC473500479A90 /* LeagueGothic-CondensedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LeagueGothic-CondensedItalic.otf"; sourceTree = "<group>"; };
@@ -479,8 +476,8 @@
 				58196EAA16EC3A6F00479A90 /* THDashboardViewController.m in Sources */,
 				A0C6497116EC45F300081AD5 /* THOpportunity.m in Sources */,
 				A0C6497516EC469000081AD5 /* THOpportunityDemoFactory.m in Sources */,
-				58196EAE16EC3E0700479A90 /* THZuluDateFormatter.m in Sources */,
 				58196EB116EC415200479A90 /* THAccountSummaryView.m in Sources */,
+				58196EC016EC5D7700479A90 /* THZuluDateFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
