@@ -7,10 +7,12 @@
 //
 
 #import "THLoginViewController.h"
+#import "THAccount.h"
 
 @interface THLoginViewController ()
-@property (nonatomic, strong) IBOutlet UITextField *aaNumber;
-@property (nonatomic, strong) IBOutlet UITextField *password;
+
+
+
 @end
 
 @implementation THLoginViewController
@@ -44,7 +46,11 @@
 
 - (IBAction)login:(id)sender
 {
-    
+	THAccount *account = [[THAccount alloc] init];
+	account.aadvantageNumber = self.aaNumber.text;
+	
+    [self.delegate loginViewControllerDidRequestSignIn:self];
+	[self.spinner startAnimating];
 }
 
 @end

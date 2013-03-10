@@ -72,6 +72,8 @@ NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 - (void)_fetchCurrentFlightInfoWithFlight:(THFlight *)flight
 {
 	[self.client fetchFlightStatusWithFlight:flight account:self.account completion:^(id responseData, NSError *error) {
+		
+		NSLog(@"Response Data: %@ Error: %@", responseData, error);
 		_nextFlight = responseData;
 		[self postUpdateNotificationsIfNeeded];
 	}];
@@ -84,10 +86,12 @@ NSString * const THMemberDataSourceDidUpdate = @"THMemberDataSourceDidUpdate";
 
 - (void)postUpdateNotificationsIfNeeded
 {
+	[[NSNotificationCenter defaultCenter] postNotificationName:THMemberDataSourceDidUpdate object:self];
+	
 	if (![self isReady])
 		return;
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:THMemberDataSourceDidUpdate object:self];
+	[[NSNotificationCenter defaultCenter] postNotificationName:THMemberDataSourceDidBecomeReadyNotification object:self];
 }
 
 @end

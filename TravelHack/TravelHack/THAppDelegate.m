@@ -12,30 +12,66 @@
 #import "THMemberDataSource.h"
 #import "THNLClient.h"
 #import "THDashboardViewController.h"
+#import "THLoginViewController.h"
 
-@interface THAppDelegate()
+@interface THAppDelegate() <THLoginViewControllerDelegate>
 
 @property (nonatomic, strong) THMemberDataSource *memberDataSource;
+@property (nonatomic, strong) THLoginViewController *loginViewController;
+@property (nonatomic, strong) THDashboardViewController *dashboardViewController;
 
 @end
 
 @implementation THAppDelegate
 
+#pragma mark - THLoginViewControllerDelegate
+- (void)loginViewControllerDidRequestSignIn:(THLoginViewController *)loginViewController
+{
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:THMemberDataSourceDidBecomeReadyNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMemberDataSourceDidBecomeReadyNotification:) name:THMemberDataSourceDidBecomeReadyNotification object:nil];
+	
+	self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:loginViewController.aaNumber.text password:loginViewController.password.text];
+	
+//	[self performSelector:@selector(didReceiveMemberDataSourceDidBecomeReadyNotification:) withObject:nil afterDelay:2];
+}
+
+#pragma mark - THMemberDataSource
+- (void)didReceiveMemberDataSourceDidBecomeReadyNotification:(NSNotification *)note
+{
+	// show dashboard
+	self.dashboardViewController = [[THDashboardViewController alloc] init];
+	
+	[UIView transitionFromView:self.loginViewController.view toView:self.dashboardViewController.view duration:.6 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished) {
+		
+		self.window.rootViewController = self.dashboardViewController;
+	}];
+//	
+//	[UIView animateWithDuration:.4 animations:^{
+//		
+//		CGPoint centerPoint = self.loginViewController.view.center;
+//		self.loginViewController.view.frame = CGRectMake(centerPoint.x, centerPoint.y, 1, 1);
+//	} completion:^(BOOL finished) {
+//		
+//		self.window.rootViewController = self.dashboardViewController;
+//	}];
+}
+
+#pragma mark - UIApplicationDelegate
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	
-	dispatch_async(dispatch_get_main_queue(), ^{
-		self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
-		
-	});
-	
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[THDashboardViewController alloc] init];
-	[self.window makeKeyAndVisible];
 	
-	self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
+	self.loginViewController = [[THLoginViewController alloc] init];
+	self.loginViewController.delegate = self;
+	
+	self.window.rootViewController = self.loginViewController;
+	[self.window makeKeyAndVisible];
+
+	self.loginViewController.aaNumber.text = AAADVANTAGE_NUMBER;
+	self.loginViewController.password.text = PASSWORD;
 	
 	[[THNLClient sharedClient] executePOISearchForAirportCode:@"DFW" completion:^(id responseData, NSError *error) {
 		NSLog(@"%@", responseData);
