@@ -10,6 +10,7 @@
 #import "DCIntrospect.h"
 #import "THAAClient.h"
 #import "THMemberDataSource.h"
+#import "THNLClient.h"
 
 #define AAADVANTAGE_NUMBER @"592T7E0"
 #define PASSWORD @"testing"
@@ -28,6 +29,10 @@
     [self.window makeKeyAndVisible];
 	
 	self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
+	
+	[[THNLClient sharedClient] executePOISearchForAirportCode:@"DFW" completion:^(id responseData, NSError *error) {
+		NSLog(@"%@", responseData);
+	}];
 	
 #if TARGET_IPHONE_SIMULATOR
 	[[DCIntrospect sharedIntrospector] start];
