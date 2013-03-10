@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *timeLabel;
 @property (nonatomic, strong) IBOutlet UILabel *statusLabel;
 @property (nonatomic, strong) IBOutlet UILabel *terminalLabel;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 
 - (void)split;
 - (void)join;
