@@ -15,3 +15,9 @@
 
 #define AAADVANTAGE_NUMBER @"592T7E0"
 #define PASSWORD @"testing"
+
+// Font Names
+#define LEAGUE_GOTHIC_R @"LeagueGothic-Regular"
+#define LEAGUE_GOTHIC_I @"LeagueGothic-Italic"
+#define LEAGUE_GOTHIC_CR @"LeagueGothic-CondensedRegular"
+#define LEAGUE_GOTHIC_CI @"LeagueGothic-CondensedItalic"

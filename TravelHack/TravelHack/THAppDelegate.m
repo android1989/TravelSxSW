@@ -10,6 +10,7 @@
 #import "DCIntrospect.h"
 #import "THAAClient.h"
 #import "THMemberDataSource.h"
+#import "THDashboardViewController.h"
 
 @interface THAppDelegate()
 
@@ -38,7 +39,8 @@
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    self.window.rootViewController = [[THDashboardViewController alloc] init];
+	[self.window makeKeyAndVisible];
 	
 	self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
 	

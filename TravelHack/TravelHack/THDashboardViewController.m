@@ -7,9 +7,11 @@
 //
 
 #import "THDashboardViewController.h"
+#import "THAccountSummaryView.h"
 
 @interface THDashboardViewController ()
 
+@property (nonatomic, weak) THAccountSummaryView *accountSummaryView;
 
 @end
 
@@ -28,7 +30,11 @@
 {
     [super viewDidLoad];
 	
-	
+	THAccountSummaryView *summaryView = [[THAccountSummaryView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 109.f)];
+	[self.view addSubview:summaryView];
+	[summaryView setCurrentPoints:121000];
+	[summaryView setBadgeImage:[UIImage imageNamed:@"badge"]];
+	self.accountSummaryView = summaryView;
 }
 
 - (void)didReceiveMemoryWarning
