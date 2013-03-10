@@ -26,14 +26,6 @@
 	dispatch_async(dispatch_get_main_queue(), ^{
 		self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
 		
-		[[THAAClient client] loginWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
-		[[THAAClient client] fetchAccountInformationWithUsername:AAADVANTAGE_NUMBER password:PASSWORD completion:^(id responseData, NSError *error) {
-			NSLog(@"Account Info: %@", error);
-		}];
-		
-		[[THAAClient client] fetchReservationListWithUsername:AAADVANTAGE_NUMBER password:PASSWORD completion:^(id responseData, NSError *error) {
-			NSLog(@"Account Info: %@", error);
-		}];
 	});
 	
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -43,6 +35,10 @@
 	[self.window makeKeyAndVisible];
 	
 	self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
+	
+	[[THNLClient sharedClient] executePOISearchForAirportCode:@"DFW" completion:^(id responseData, NSError *error) {
+		NSLog(@"%@", responseData);
+	}];
 	
 #if TARGET_IPHONE_SIMULATOR
 	[[DCIntrospect sharedIntrospector] start];

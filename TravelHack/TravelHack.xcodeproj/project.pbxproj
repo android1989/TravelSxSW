@@ -39,6 +39,11 @@
 		A0C6495F16EBEF2A00081AD5 /* THFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6495E16EBEF2A00081AD5 /* THFlight.m */; };
 		A0C6496216EBF02F00081AD5 /* THReservation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6496116EBF02F00081AD5 /* THReservation.m */; };
 		A0C6496516EBF75A00081AD5 /* THFlightStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6496416EBF75900081AD5 /* THFlightStatus.m */; };
+		A0C6496D16EC2C7000081AD5 /* THNLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6496C16EC2C7000081AD5 /* THNLClient.m */; };
+		A0C6497116EC45F300081AD5 /* THOpportunity.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6497016EC45F300081AD5 /* THOpportunity.m */; };
+		A0C6497516EC469000081AD5 /* THOpportunityDemoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6497416EC469000081AD5 /* THOpportunityDemoFactory.m */; };
+		A0C6497716EC46B600081AD5 /* DemoOpportunities.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0C6497616EC46B600081AD5 /* DemoOpportunities.plist */; };
+		A0C6497A16EC4BEF00081AD5 /* THZuluDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C6497916EC4BEF00081AD5 /* THZuluDateFormatter.m */; };
 		AFE3367716EB958300034BA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367616EB958300034BA4 /* UIKit.framework */; };
 		AFE3367916EB958300034BA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367816EB958300034BA4 /* Foundation.framework */; };
 		AFE3367B16EB958300034BA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE3367A16EB958300034BA4 /* CoreGraphics.framework */; };
@@ -110,6 +115,15 @@
 		A0C6496116EBF02F00081AD5 /* THReservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THReservation.m; path = Data/THReservation.m; sourceTree = "<group>"; };
 		A0C6496316EBF75900081AD5 /* THFlightStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THFlightStatus.h; path = Data/THFlightStatus.h; sourceTree = "<group>"; };
 		A0C6496416EBF75900081AD5 /* THFlightStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THFlightStatus.m; path = Data/THFlightStatus.m; sourceTree = "<group>"; };
+		A0C6496B16EC2C7000081AD5 /* THNLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THNLClient.h; path = Data/NeverLost/THNLClient.h; sourceTree = "<group>"; };
+		A0C6496C16EC2C7000081AD5 /* THNLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THNLClient.m; path = Data/NeverLost/THNLClient.m; sourceTree = "<group>"; };
+		A0C6496F16EC45F300081AD5 /* THOpportunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THOpportunity.h; path = Data/Opportunities/THOpportunity.h; sourceTree = "<group>"; };
+		A0C6497016EC45F300081AD5 /* THOpportunity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THOpportunity.m; path = Data/Opportunities/THOpportunity.m; sourceTree = "<group>"; };
+		A0C6497316EC469000081AD5 /* THOpportunityDemoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THOpportunityDemoFactory.h; path = Demo/THOpportunityDemoFactory.h; sourceTree = "<group>"; };
+		A0C6497416EC469000081AD5 /* THOpportunityDemoFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THOpportunityDemoFactory.m; path = Demo/THOpportunityDemoFactory.m; sourceTree = "<group>"; };
+		A0C6497616EC46B600081AD5 /* DemoOpportunities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DemoOpportunities.plist; path = Demo/DemoOpportunities.plist; sourceTree = "<group>"; };
+		A0C6497816EC4BEF00081AD5 /* THZuluDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THZuluDateFormatter.h; path = Data/THZuluDateFormatter.h; sourceTree = "<group>"; };
+		A0C6497916EC4BEF00081AD5 /* THZuluDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THZuluDateFormatter.m; path = Data/THZuluDateFormatter.m; sourceTree = "<group>"; };
 		AFE3367316EB958300034BA4 /* TravelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE3367616EB958300034BA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFE3367816EB958300034BA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -253,8 +267,10 @@
 		A0C6495016EBDF8000081AD5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				58196EAC16EC3E0700479A90 /* THZuluDateFormatter.h */,
-				58196EAD16EC3E0700479A90 /* THZuluDateFormatter.m */,
+				A0C6496E16EC45DB00081AD5 /* Opportunities */,
+				A0C6496A16EC2C5300081AD5 /* Neverlost */,
+				A0C6497816EC4BEF00081AD5 /* THZuluDateFormatter.h */,
+				A0C6497916EC4BEF00081AD5 /* THZuluDateFormatter.m */,
 				A0C6495116EBDFA100081AD5 /* THMemberDataSource.h */,
 				A0C6495216EBDFA100081AD5 /* THMemberDataSource.m */,
 				A0C6495416EBDFC200081AD5 /* THAAMember.h */,
@@ -271,6 +287,33 @@
 				A0C6496416EBF75900081AD5 /* THFlightStatus.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		A0C6496A16EC2C5300081AD5 /* Neverlost */ = {
+			isa = PBXGroup;
+			children = (
+				A0C6496B16EC2C7000081AD5 /* THNLClient.h */,
+				A0C6496C16EC2C7000081AD5 /* THNLClient.m */,
+			);
+			name = Neverlost;
+			sourceTree = "<group>";
+		};
+		A0C6496E16EC45DB00081AD5 /* Opportunities */ = {
+			isa = PBXGroup;
+			children = (
+				A0C6496F16EC45F300081AD5 /* THOpportunity.h */,
+				A0C6497016EC45F300081AD5 /* THOpportunity.m */,
+			);
+			name = Opportunities;
+			sourceTree = "<group>";
+		};
+		A0C6497216EC467B00081AD5 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				A0C6497316EC469000081AD5 /* THOpportunityDemoFactory.h */,
+				A0C6497416EC469000081AD5 /* THOpportunityDemoFactory.m */,
+			);
+			name = Demo;
 			sourceTree = "<group>";
 		};
 		AFE3366A16EB958300034BA4 = {
@@ -329,6 +372,7 @@
 				AFE3368816EB958300034BA4 /* Default.png */,
 				AFE3368A16EB958300034BA4 /* Default@2x.png */,
 				AFE3368C16EB958300034BA4 /* Default-568h@2x.png */,
+				A0C6497616EC46B600081AD5 /* DemoOpportunities.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -428,6 +472,7 @@
 				A0C6495F16EBEF2A00081AD5 /* THFlight.m in Sources */,
 				A0C6496216EBF02F00081AD5 /* THReservation.m in Sources */,
 				A0C6496516EBF75A00081AD5 /* THFlightStatus.m in Sources */,
+				A0C6496D16EC2C7000081AD5 /* THNLClient.m in Sources */,
 				58196EAA16EC3A6F00479A90 /* THDashboardViewController.m in Sources */,
 				58196EAE16EC3E0700479A90 /* THZuluDateFormatter.m in Sources */,
 				58196EB116EC415200479A90 /* THAccountSummaryView.m in Sources */,
