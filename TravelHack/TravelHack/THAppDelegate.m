@@ -39,7 +39,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-
+	
+	self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:AAADVANTAGE_NUMBER password:PASSWORD];
+	
 #if TARGET_IPHONE_SIMULATOR
 	[[DCIntrospect sharedIntrospector] start];
 #endif

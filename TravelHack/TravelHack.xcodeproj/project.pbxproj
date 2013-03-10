@@ -90,7 +90,6 @@
 		A0C6496116EBF02F00081AD5 /* THReservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THReservation.m; path = Data/THReservation.m; sourceTree = "<group>"; };
 		A0C6496316EBF75900081AD5 /* THFlightStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THFlightStatus.h; path = Data/THFlightStatus.h; sourceTree = "<group>"; };
 		A0C6496416EBF75900081AD5 /* THFlightStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THFlightStatus.m; path = Data/THFlightStatus.m; sourceTree = "<group>"; };
-		A0C6496716EBFDFE00081AD5 /* THZuluDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THZuluDateFormatter.h; path = Data/THZuluDateFormatter.h; sourceTree = "<group>"; };
 		A0C6496816EBFDFE00081AD5 /* THZuluDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THZuluDateFormatter.m; path = Data/THZuluDateFormatter.m; sourceTree = "<group>"; };
 		AFE3367316EB958300034BA4 /* TravelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE3367616EB958300034BA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -214,19 +213,9 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
-		A0C6496616EBFDDF00081AD5 /* Formatter */ = {
-			isa = PBXGroup;
-			children = (
-				A0C6496716EBFDFE00081AD5 /* THZuluDateFormatter.h */,
-				A0C6496816EBFDFE00081AD5 /* THZuluDateFormatter.m */,
-			);
-			name = Formatter;
-			sourceTree = "<group>";
-		};
 		AFE3366A16EB958300034BA4 = {
 			isa = PBXGroup;
 			children = (
-				A0C6494E16EBD69700081AD5 /* SystemConfiguration.framework */,
 				589875A716EB9EAD008A24A1 /* Submodules */,
 				AFE3367C16EB958300034BA4 /* TravelHack */,
 				AFE3367516EB958300034BA4 /* Frameworks */,
@@ -245,6 +234,7 @@
 		AFE3367516EB958300034BA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0C6494E16EBD69700081AD5 /* SystemConfiguration.framework */,
 				AFE3367A16EB958300034BA4 /* CoreGraphics.framework */,
 				AFE3367816EB958300034BA4 /* Foundation.framework */,
 				589875A816EB9F1F008A24A1 /* QuartzCore.framework */,
