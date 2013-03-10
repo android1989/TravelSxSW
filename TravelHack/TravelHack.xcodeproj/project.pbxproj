@@ -223,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				A0C6496A16EC2C5300081AD5 /* Neverlost */,
+				58196EAC16EC3E0700479A90 /* THZuluDateFormatter.h */,
+				58196EAD16EC3E0700479A90 /* THZuluDateFormatter.m */,
 				A0C6495116EBDFA100081AD5 /* THMemberDataSource.h */,
 				A0C6495216EBDFA100081AD5 /* THMemberDataSource.m */,
 				A0C6495416EBDFC200081AD5 /* THAAMember.h */,
@@ -408,6 +410,8 @@
 				A0C6496516EBF75A00081AD5 /* THFlightStatus.m in Sources */,
 				A0C6496916EBFDFE00081AD5 /* THZuluDateFormatter.m in Sources */,
 				A0C6496D16EC2C7000081AD5 /* THNLClient.m in Sources */,
+				58196EAA16EC3A6F00479A90 /* THDashboardViewController.m in Sources */,
+				58196EAE16EC3E0700479A90 /* THZuluDateFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
