@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "THOpportunity.h"
 
 @interface THPastOpportunityCell : UITableViewCell
 
@@ -14,4 +15,6 @@
 @property (nonatomic, strong) IBOutlet UILabel *dateLabel;
 @property (nonatomic, strong) IBOutlet UIImageView *opportunityIcon;
 @property (nonatomic, strong) IBOutlet UILabel *pointLabel;
+
+- (void)setOpportunity:(THOpportunity *)opportunity;
 @end

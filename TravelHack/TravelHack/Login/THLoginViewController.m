@@ -34,8 +34,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	self.aaNumber.text = AAADVANTAGE_NUMBER;
-	self.password.text = PASSWORD;
+	self.aaNumber.text = AADVANTAGE_NUMBER;
+	self.password.text = AADVANTAGE_PASSWORD;
+	
+	self.signInButton.titleLabel.font = [UIFont fontWithName:LEAGUE_GOTHIC_R size:26.f];
 }
 
 - (void)didReceiveMemoryWarning

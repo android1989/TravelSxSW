@@ -24,6 +24,7 @@
 @property (nonatomic, strong) IBOutlet THPastOpportunitiesViewController *pastViewController;
 @property (nonatomic, assign) BOOL isSplitViewOpen;
 @property (nonatomic, assign) BOOL isDown;
+
 @end
 
 @implementation THDashboardViewController
@@ -43,6 +44,11 @@
 {
     [super viewDidLoad];
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataSourceDidUpdate) name:THMemberDataSourceDidUpdate object:nil];
+	
+	if (self.dataSource.isReady)
+		[self dataSourceDidUpdate];
+	
 	/*THAccountSummaryView *summaryView = [[THAccountSummaryView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 109.f)];
 	[self.view addSubview:summaryView];
 	[summaryView setCurrentPoints:121000];
@@ -54,6 +60,30 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dataSourceDidUpdate
+{
+	THAccount *account = self.dataSource.account;
+	THFlight *flight = self.dataSource.nextFlight;
+	
+	NSString *date = [NSDateFormatter localizedStringFromDate:flight.depatureDate dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
+	
+	
+	self.splitViewController.pointsLabel.text = [NSNumberFormatter localizedStringFromNumber:account.accountBalance.awardMileage numberStyle:NSNumberFormatterDecimalStyle];
+	self.splitViewController.timeLabel.text = date;
+	self.splitViewController.statusLabel.text = flight.flightStatus.status;
+	self.splitViewController.terminalLabel.text = [NSString stringWithFormat:@"Gate %@", flight.flightStatus.originInfo.gate];
+	[self.splitViewController.view setNeedsLayout];
+	
+	/*
+	@property (nonatomic, strong) IBOutlet UILabel *pointsLabel;
+	@property (nonatomic, strong) IBOutlet UILabel *staticTimeLabel;
+	@property (nonatomic, strong) IBOutlet UILabel *staticStatusLabel;
+	@property (nonatomic, strong) IBOutlet UILabel *timeLabel;
+	@property (nonatomic, strong) IBOutlet UILabel *statusLabel;
+	@property (nonatomic, strong) IBOutlet UILabel *terminalLabel;
+	 */
 }
 
 #pragma mark - Split View Gestures

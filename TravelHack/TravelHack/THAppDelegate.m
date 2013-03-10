@@ -30,9 +30,10 @@
 	self.memberDataSource = member;
 	
 	self.dashboardViewController = [[THDashboardViewController alloc] init];
+	self.dashboardViewController.dataSource = self.memberDataSource;
 	
 	[UIView transitionFromView:self.loginViewController.view toView:self.dashboardViewController.view duration:.6 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished) {
-		
+	
 		self.window.rootViewController = self.dashboardViewController;
 		self.loginViewController = nil;
 	}];

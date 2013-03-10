@@ -78,11 +78,9 @@
     THPastOpportunityCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([THPastOpportunityCell class])];
     
     //set cell properties
-	THOpportunity *op = self.opportunities[indexPath.row];
-	cell.opportunityLabel.text = op.title;
-	cell.opportunityIcon.image = [THOpportunityImageFactory imageForOpportunity:op];
-	cell.pointLabel.text = [NSString stringWithFormat:@"%@", op.pointValue];
-	cell.dateLabel.text = [NSString stringWithFormat:@"%@ at %@", op.date, op.location];
+	
+	THOpportunity *op = self.opportunities[indexPath.row];	
+	[cell setOpportunity:op];
     
     return cell;
 }

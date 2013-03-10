@@ -7,6 +7,7 @@
 //
 
 #import "THPastOpportunityCell.h"
+#import "THOpportunityImageFactory.h"
 
 @implementation THPastOpportunityCell
 
@@ -51,6 +52,15 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setOpportunity:(THOpportunity *)op
+{
+	self.opportunityLabel.text = op.title;
+	self.opportunityIcon.image = [THOpportunityImageFactory imageForOpportunity:op];
+	self.pointLabel.text = [NSString stringWithFormat:@"%@", op.pointValue];
+	self.dateLabel.text = [NSString stringWithFormat:@"%@ at %@", op.date, op.location];
+
 }
 
 @end
