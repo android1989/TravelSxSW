@@ -49,6 +49,7 @@
 	
 	self.tableView = [[UITableView alloc] initWithFrame:view.bounds style:UITableViewStylePlain];
 	self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 	self.tableView.backgroundColor = nil;
 	
 	CGFloat top = CGRectGetHeight(self.topSplitView.bounds);
@@ -159,6 +160,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	THPastOpportunityCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([THPastOpportunityCell class])];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    UIColor *whiteColor = [UIColor colorWithRed:(237.0f/255.0f) green:(237.0f/255.0f) blue:(240.0f/255.0f) alpha:1];
+    [cell.opportunityLabel setTextColor:whiteColor];
+    [cell.dateLabel setTextColor:whiteColor];
+    [cell.pointLabel setTextColor:whiteColor];
+    
 	THOpportunity *opportunity = [self.redeemableOpportunities objectAtIndex:indexPath.row];
 	[cell setOpportunity:opportunity];
 	
@@ -168,7 +175,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {	
 	UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"Identifier"];
-	view.textLabel.text = @"SHOP With Miles";
+	view.textLabel.text = @"Shop With Miles";
 	view.textLabel.textAlignment = NSTextAlignmentCenter;
 	view.textLabel.textColor = [UIColor colorWithRed:237.0 / 255.0 green:237.0 /255.0  blue:240.0 / 255.0 alpha:1.0];
 	view.tintColor = [UIColor colorWithRed:76.0 / 255.0 green:86.0 / 255.0 blue:114.0 / 255.0 alpha:1.0];

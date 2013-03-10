@@ -87,6 +87,21 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
+					<object class="IBUIImageView" id="744691394">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrameSize">{320, 548}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="1026356665"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<object class="NSCustomResource" key="IBUIImage" id="1037173223">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">background.png</string>
+						</object>
+					</object>
 					<object class="IBUIView" id="529007148">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">268</int>
@@ -112,7 +127,7 @@
 								<string key="NSFrame">{{0, -218}, {320, 548}}</string>
 								<reference key="NSSuperview" ref="529007148"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="503375185"/>
+								<reference key="NSNextKeyView" ref="596957773"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -138,10 +153,6 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="269073613"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAwLjcyMzkxNDY0MTkgMC42OTEyOTM2ODg1AA</bytes>
-						</object>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -159,10 +170,7 @@
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<object class="NSCustomResource" key="IBUIImage" id="1023208527">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">background.png</string>
-								</object>
+								<reference key="IBUIImage" ref="1037173223"/>
 							</object>
 							<object class="IBUIView" id="583747390">
 								<reference key="NSNextResponder" ref="233144766"/>
@@ -170,7 +178,7 @@
 								<string key="NSFrameSize">{320, 330}</string>
 								<reference key="NSSuperview" ref="233144766"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="1026356665"/>
+								<reference key="NSNextKeyView" ref="744691394"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
@@ -180,10 +188,6 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="563238339"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC43MzAzNTE0OTgxIDEgMC42MzYxODYxMjI5AA</bytes>
-						</object>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -205,7 +209,10 @@
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-										<reference key="IBUIImage" ref="1023208527"/>
+										<object class="NSCustomResource" key="IBUIImage">
+											<string key="NSClassName">NSImage</string>
+											<string key="NSResourceName">dark_background.png</string>
+										</object>
 									</object>
 								</array>
 								<string key="NSFrameSize">{320, 218}</string>
@@ -213,10 +220,6 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="69154129"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<object class="NSColor" key="IBUIBackgroundColor">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC44NjA0OTEwNzE0IDAuODQxODg4MzQ1NiAwLjYwMDEyMzU0NwA</bytes>
-								</object>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
@@ -605,7 +608,7 @@
 						<reference key="IBUIGestureRecognizers" ref="0"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIButton" id="503375185">
+					<object class="IBUIButton" id="596957773">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, 504}, {320, 44}}</string>
@@ -926,7 +929,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">simulateOpportuniy:</string>
-						<reference key="source" ref="503375185"/>
+						<reference key="source" ref="596957773"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -948,7 +951,8 @@
 							<reference ref="529007148"/>
 							<reference ref="1026356665"/>
 							<reference ref="233144766"/>
-							<reference ref="503375185"/>
+							<reference ref="596957773"/>
+							<reference ref="744691394"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1156,7 +1160,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">84</int>
-						<reference key="object" ref="503375185"/>
+						<reference key="object" ref="596957773"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">86</int>
+						<reference key="object" ref="744691394"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -1204,42 +1213,19 @@
 				<string key="80.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="82.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="84.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="86.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">85</int>
+			<int key="maxID">86</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">THDashboardViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="simulateOpportuniy:">id</string>
-						<string key="splitViewBottomTouchUpInside:">UITapGestureRecognizer</string>
-						<string key="splitViewDidPan:">UIPanGestureRecognizer</string>
-						<string key="splitViewTopTouchUpInside:">UITapGestureRecognizer</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="simulateOpportuniy:">
-							<string key="name">simulateOpportuniy:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="splitViewBottomTouchUpInside:">
-							<string key="name">splitViewBottomTouchUpInside:</string>
-							<string key="candidateClassName">UITapGestureRecognizer</string>
-						</object>
-						<object class="IBActionInfo" key="splitViewDidPan:">
-							<string key="name">splitViewDidPan:</string>
-							<string key="candidateClassName">UIPanGestureRecognizer</string>
-						</object>
-						<object class="IBActionInfo" key="splitViewTopTouchUpInside:">
-							<string key="name">splitViewTopTouchUpInside:</string>
-							<string key="candidateClassName">UITapGestureRecognizer</string>
-						</object>
-					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="flightDescription">UILabel</string>
 						<string key="mapView">UIView</string>
@@ -1399,6 +1385,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="background.png">{640, 1136}</string>
 			<string key="badge@2x.png">{222, 225}</string>
+			<string key="dark_background.png">{640, 1136}</string>
 			<string key="profile_bottom@2x.png">{640, 218}</string>
 			<string key="profile_top@2x.png">{640, 218}</string>
 			<string key="shadow.png">{640, 20}</string>
