@@ -111,6 +111,7 @@
 								<string key="NSFrame">{{0, -218}, {320, 548}}</string>
 								<reference key="NSSuperview" ref="529007148"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -153,7 +154,7 @@
 								<string key="NSFrameSize">{320, 548}</string>
 								<reference key="NSSuperview" ref="233144766"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="39730375"/>
+								<reference key="NSNextKeyView" ref="583747390"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -162,20 +163,22 @@
 									<string key="NSResourceName">background.png</string>
 								</object>
 							</object>
-							<object class="IBUIImageView" id="39730375">
+							<object class="IBUIView" id="583747390">
 								<reference key="NSNextResponder" ref="233144766"/>
-								<int key="NSvFlags">290</int>
+								<int key="NSvFlags">292</int>
 								<string key="NSFrameSize">{320, 330}</string>
 								<reference key="NSSuperview" ref="233144766"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1026356665"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<object class="NSCustomResource" key="IBUIImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">map_background.png</string>
+								<object class="NSColor" key="IBUIBackgroundColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+									<object class="NSColorSpace" key="NSCustomColorSpace" id="424708110">
+										<int key="NSID">2</int>
+									</object>
 								</object>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
 						<string key="NSFrameSize">{320, 0}</string>
@@ -519,9 +522,7 @@
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
-					<object class="NSColorSpace" key="NSCustomColorSpace">
-						<int key="NSID">2</int>
-					</object>
+					<reference key="NSCustomColorSpace" ref="424708110"/>
 				</object>
 				<reference key="IBUISimulatedStatusBarMetrics" ref="811003240"/>
 				<reference key="IBUISimulatedDestinationMetrics" ref="541584693"/>
@@ -662,6 +663,14 @@
 						<reference key="destination" ref="233144766"/>
 					</object>
 					<int key="connectionID">18</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">radarView</string>
+						<reference key="source" ref="900374902"/>
+						<reference key="destination" ref="583747390"/>
+					</object>
+					<int key="connectionID">76</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -842,7 +851,7 @@
 						<reference key="object" ref="233144766"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="563238339"/>
-							<reference ref="39730375"/>
+							<reference ref="583747390"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -902,11 +911,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">52</int>
 						<reference key="object" ref="563238339"/>
-						<reference key="parent" ref="233144766"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">53</int>
-						<reference key="object" ref="39730375"/>
 						<reference key="parent" ref="233144766"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -974,6 +978,11 @@
 						<reference key="object" ref="1066431021"/>
 						<reference key="parent" ref="1026356665"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">75</int>
+						<reference key="object" ref="583747390"/>
+						<reference key="parent" ref="233144766"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1000,7 +1009,6 @@
 				<string key="44.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="51.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="52.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="53.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="54.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="55.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1014,12 +1022,14 @@
 				<string key="70.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="71.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="75.CustomClassName">THRadarView</string>
+				<string key="75.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">74</int>
+			<int key="maxID">76</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1179,7 +1189,6 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="background.png">{640, 1136}</string>
 			<string key="badge@2x.png">{222, 225}</string>
-			<string key="map_background.png">{640, 700}</string>
 			<string key="profile_bottom@2x.png">{640, 218}</string>
 			<string key="profile_top@2x.png">{640, 218}</string>
 			<string key="shadow.png">{640, 20}</string>
