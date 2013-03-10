@@ -25,35 +25,18 @@
 @implementation THAppDelegate
 
 #pragma mark - THLoginViewControllerDelegate
-- (void)loginViewControllerDidRequestSignIn:(THLoginViewController *)loginViewController
+- (void)loginViewController:(THLoginViewController *)loginViewController didRetrieveMember:(THMemberDataSource *)member
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:THMemberDataSourceDidBecomeReadyNotification object:nil];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMemberDataSourceDidBecomeReadyNotification:) name:THMemberDataSourceDidBecomeReadyNotification object:nil];
+	self.memberDataSource = member;
 	
-	self.memberDataSource = [[THMemberDataSource alloc] initWithUsername:loginViewController.aaNumber.text password:loginViewController.password.text];
-	
-//	[self performSelector:@selector(didReceiveMemberDataSourceDidBecomeReadyNotification:) withObject:nil afterDelay:2];
-}
-
-#pragma mark - THMemberDataSource
-- (void)didReceiveMemberDataSourceDidBecomeReadyNotification:(NSNotification *)note
-{
-	// show dashboard
 	self.dashboardViewController = [[THDashboardViewController alloc] init];
 	
 	[UIView transitionFromView:self.loginViewController.view toView:self.dashboardViewController.view duration:.6 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished) {
 		
 		self.window.rootViewController = self.dashboardViewController;
+		self.loginViewController = nil;
 	}];
-//	
-//	[UIView animateWithDuration:.4 animations:^{
-//		
-//		CGPoint centerPoint = self.loginViewController.view.center;
-//		self.loginViewController.view.frame = CGRectMake(centerPoint.x, centerPoint.y, 1, 1);
-//	} completion:^(BOOL finished) {
-//		
-//		self.window.rootViewController = self.dashboardViewController;
-//	}];
+
 }
 
 #pragma mark - UIApplicationDelegate
@@ -69,9 +52,6 @@
 	
 	self.window.rootViewController = self.loginViewController;
 	[self.window makeKeyAndVisible];
-
-	self.loginViewController.aaNumber.text = AAADVANTAGE_NUMBER;
-	self.loginViewController.password.text = PASSWORD;
 		
 #if TARGET_IPHONE_SIMULATOR
 	[[DCIntrospect sharedIntrospector] start];
