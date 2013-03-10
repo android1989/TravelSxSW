@@ -121,6 +121,7 @@
 {
     self.basePoints = basePoints;
     self.additions = addition;
+    [self.addUpTimer invalidate];
     self.addUpTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(addUpTimer:) userInfo:nil repeats:YES];
 }
 
